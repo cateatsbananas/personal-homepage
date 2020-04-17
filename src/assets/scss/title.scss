@@ -1,0 +1,108 @@
+@import './variables';
+@import './functions';
+@import './mixins';
+
+.title {
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  @include padding(8rem, 7rem, 1rem, 7rem);
+  @include margin(4rem, 0, 0rem, 0);
+  text-shadow: 1px 0 2px black;
+
+  @include responsive_mobile() {
+    @include padding(1rem, 1rem, 1rem, 1rem);
+    @include margin(6rem, 0, 0rem, 0);
+  }
+
+  @include responsive_tablet() {
+    @include margin(6rem, 0, 0rem, 0);
+  }
+
+  h1,
+  h3 {
+    text-transform: uppercase;
+    display: flex;
+    /* letter-spacing: 1px; */
+    position: relative;
+    align-items: center;
+    @include padding(0rem, 1rem, 2rem, 2.5rem);
+    animation: coming 1s;
+    animation-timing-function: cubic-bezier(0.15, 0.47, 0.42, 0.95);
+
+    &.lg-heading {
+      display: inline;
+      font-size: 3rem;
+    }
+
+    &.sm-heading {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+  }
+
+  h1 {
+    letter-spacing: 2px;
+  }
+  h3:after {
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 2px;
+    background-color: color(hover_h2);
+    left: 3rem;
+    animation: transitionToRight 2s;
+    animation-timing-function: cubic-bezier(0.8, -0.49, 0.36, 1);
+    bottom: 0;
+    box-shadow: 1px 0 2px black;
+
+    @include responsive_mobile() {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .icons {
+    /*  min-width: 5rem; */
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    display: inline;
+    list-style-type: none;
+    font-size: 2.5rem;
+    @include responsive_mobile() {
+      display: block;
+      align-items: center;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: color(text);
+      padding: 0.4rem;
+      &:hover,
+      &:active {
+        font-size: 3rem;
+        transition: 0.2s;
+        color: color(hover_h2);
+      }
+    }
+  }
+
+  p {
+    @include padding(0.5rem, 1rem, 0.5rem, 2.8rem);
+    animation: fadeIn 3s;
+    animation-timing-function: cubic-bezier(0.92, 0.01, 0.98, 0.78);
+    @include responsive_desktop() {
+      @include padding(0.5rem, 2rem, 0.5rem, 2.8rem);
+      margin-bottom: 15rem;
+    }
+    @include responsive_desktop_large() {
+      @include padding(0.5rem, 2rem, 0.5rem, 2.8rem);
+      margin-bottom: 15rem;
+    }
+  }
+}

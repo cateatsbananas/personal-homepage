@@ -1,0 +1,223 @@
+@import './variables';
+@import './functions';
+@import './mixins';
+
+#projects {
+  padding-top: 1rem;
+  overflow-x: hidden;
+
+  @include responsive_desktop() {
+    padding-top: 0.3rem;
+  }
+
+  @include responsive_ipadPro_portrait() {
+    padding-top: 0.1rem;
+  }
+
+  .wrapper {
+    z-index: 100;
+    position: relative;
+    height: 100%;
+
+    a {
+      text-decoration: none;
+      color: color(text);
+    }
+    margin: 2rem 3rem;
+
+    @include responsive_mobile() {
+      margin: 2rem 1rem;
+    }
+
+    @include responsive_desktop() {
+      padding: 8rem 5rem;
+    }
+    @include responsive_tablet() {
+      padding: 3rem 0rem;
+    }
+
+    @include responsive_ipadPro_portrait() {
+      margin-bottom: 25rem;
+      padding: 3rem 5rem;
+    }
+    @include responsive_desktop_large() {
+      padding: 5rem 5rem;
+    }
+    .title-projects {
+      animation-name: fadeIn;
+      animation-duration: 3s;
+
+      h3 {
+        color: color(text);
+        z-index: 100;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 1px 0 2px black;
+        letter-spacing: 3px;
+        position: relative;
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+      }
+
+      h3:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1.2px;
+        background-color: color(hover_h2);
+        left: 0;
+        animation-name: transitionToRight;
+        animation-duration: 2s;
+        bottom: 0;
+        text-shadow: 1px 0 2px black;
+      }
+    }
+
+    .makeStyles-root-85,
+    .makeStyles-root-145 {
+      .grid,
+      .grid-2 {
+        z-index: 100;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 2rem;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+
+        .grid-item {
+          height: 100%;
+          width: 100%;
+          z-index: 100;
+          position: relative;
+          cursor: pointer;
+          display: block;
+
+          .MuiCardHeader-root {
+            display: inline-block;
+            .MuiCardHeader-content {
+              .MuiTypography-root {
+                font-size: 0.9rem;
+              }
+            }
+          }
+          .makeStyles-root-260,
+          .makeStyles-root-292 {
+            float: right;
+            padding: 1.5rem;
+          }
+
+          &.grid-item:active,
+          &.grid-item:hover .makeStyles-root-193,
+          .makeStyles-root-253 {
+            opacity: 1;
+            @include easeOut;
+          }
+
+          &.grid-item:hover {
+            .makeStyles-media-194,
+            .makeStyles-media-254 {
+              position: relative;
+              &.makeStyles-media-194::after,
+              &.makeStyles-media-254::after {
+                content: '';
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background: rgba(color(background), 0.5);
+              }
+            }
+          }
+        }
+
+        .collapse {
+          width: 100%;
+          .MuiFormControlLabel-root {
+            padding: 3rem 0;
+          }
+
+          .MuiCollapse-wrapper {
+            background: rgba(color(background), 0.5);
+          }
+
+          .expansion {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            .expansion-panel {
+              background: none;
+              overflow: hidden;
+              position: relative;
+              width: 100%;
+
+              z-index: 100;
+
+              .MuiExpansionPanelSummary-root {
+                height: 5rem;
+                overflow: hidden;
+
+                .MuiExpansionPanelSummary-content {
+                  position: absolute;
+                  top: 0;
+                  overflow: hidden;
+                  align-content: center;
+                  align-self: center;
+
+                  p {
+                    font-size: 1.3em;
+                  }
+                }
+              }
+
+              .MuiExpansionPanelSummary-expandIcon {
+                position: absolute;
+                top: 30%;
+                overflow: hidden;
+                align-content: center;
+                align-self: center;
+                &:hover,
+                &:active {
+                  color: color(hover_text);
+                }
+              }
+              .MuiExpansionPanelDetails-root {
+                padding: 0;
+                margin-top: 1rem;
+
+                .grid-2 {
+                  z-index: 100;
+                  width: 100%;
+                  overflow: hidden;
+                  position: relative;
+                  display: block;
+                  background: none;
+
+                  .grid-item {
+                    padding: 1rem 0.5rem;
+                  }
+
+                  .makeStyles-media-194 {
+                    transform-origin: top;
+                  }
+
+                  .makeStyles-media-194:hover {
+                    cursor: pointer;
+                    transform-origin: top;
+                    transform: scaleY(1);
+                    transition: 1s;
+                    z-index: 101;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

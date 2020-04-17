@@ -1,0 +1,32 @@
+@import './variables';
+@import './functions';
+@import './mixins';
+
+@import './backdrop.scss';
+@import './sideDrawer.scss';
+@import './toggleButton.scss';
+@import './title.scss';
+@import './projects.scss';
+@import './aboutMe.scss';
+@import './fadeIn.scss';
+@import './nextSection.scss';
+@import './languageSelect.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: color(text);
+  @include background;
+  background: color(background);
+  line-height: 1.5;
+  position: relative;
+}

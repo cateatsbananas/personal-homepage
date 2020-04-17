@@ -1,0 +1,49 @@
+$colors: (
+  background: rgb(33, 33, 33),
+  hover_text: rgba(49, 123, 167, 1),
+  hover_h2: rgba(49, 123, 167, 0.9959278711484594),
+  background_nav: rgba(27, 27, 27, 0.85),
+  background_nav_extra: rgba(18, 18, 18, 0.94),
+  background_footer: hsla(25, 6%, 15%, 0.96),
+  background_icons: hsla(25, 0%, 30%, 0.9),
+  text: hsl(25, 0%, 100%),
+  border_bottom: hsl(25, 0%, 54%),
+  shadow_colour: #000000,
+);
+
+$show-home-image: true;
+$home-image: url(../images/background/landing_img.jpg);
+$project-image-1: url(../images/cards/media2.jpg);
+$background-opacity: 0.9;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionToRight {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes coming {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

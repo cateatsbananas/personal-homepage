@@ -1,0 +1,205 @@
+@import './variables';
+@import './functions';
+@import './mixins';
+
+#about {
+  padding-top: 2rem;
+  overflow: hidden;
+  @include responsive_mobile() {
+    padding-top: 0.1rem;
+  }
+  @include responsive_desktop() {
+    padding-top: 0.5rem;
+  }
+  @include responsive_desktop_large() {
+    padding-top: 0.1rem;
+  }
+  .about-me {
+    z-index: 100;
+    position: relative;
+    height: auto;
+
+    a {
+      text-decoration: none;
+      color: color(text);
+    }
+
+    @include responsive_mobile() {
+      padding: 8rem 2rem;
+    }
+    @include responsive_tablet() {
+      margin: 0 3rem;
+      padding: 8rem 2rem;
+    }
+    @include responsive_desktop() {
+      margin: 3rem 4rem;
+      padding: 5rem 5rem;
+    }
+
+    @include responsive_ipadPro_portrait() {
+      margin: 3rem 4rem;
+      padding: 8rem 5rem;
+    }
+    @include responsive_desktop_large() {
+      margin: 3rem 7rem;
+      padding: 6rem 5rem;
+    }
+
+    .title_about {
+      animation-name: fadeIn;
+      animation-duration: 3s;
+
+      h3 {
+        color: color(text);
+        z-index: 100;
+        text-align: center;
+
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 1px 0 2px black;
+        letter-spacing: 3px;
+        position: relative;
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+      }
+
+      h3:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1.1px;
+        background-color: color(hover_h2);
+        left: 0;
+        animation-name: transitionToRight;
+        animation-duration: 2s;
+        bottom: 0;
+        text-shadow: 1px 0 2px black;
+      }
+    }
+    .content_about {
+      z-index: 100;
+      margin: 1.5rem 3rem;
+      padding-top: 3rem;
+      @include responsive_mobile() {
+        margin: 1.5rem 0;
+      }
+
+      .about-1,
+      .about-2 {
+        display: block;
+        position: relative;
+        margin: 2rem;
+        padding: 0, 2rem;
+
+        button {
+          font-size: 3rem;
+          background: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          color: color(text);
+          .icon {
+            display: block;
+            position: relative;
+            @include padding(1rem, 0, 1rem, 1rem);
+            @include padding(1rem, 0, 1rem, 5rem);
+          }
+        }
+
+        h4,
+        p {
+          visibility: hidden;
+          display: none;
+        }
+
+        .section-active,
+        .section-active-two {
+          button {
+            color: color(hover_h2);
+          }
+          h4,
+          p {
+            visibility: visible;
+            animation-name: fadeIn;
+            animation-duration: 2s;
+          }
+          h4:before {
+            content: '';
+            position: absolute;
+            width: 50vw;
+            height: 1px;
+            background-color: color(hover_h2);
+            left: -10vw;
+            animation: transitionToRight 0.4s;
+            /* animation-timing-function: cubic-bezier(0.8, -0.49, 0.36, 1); */
+            top: 0;
+            box-shadow: 1px 0 2px black;
+            @include responsive_tablet() {
+              width: 40vw;
+              left: -5vw;
+            }
+            @include responsive_desktop() {
+              width: 30vw;
+              left: -2vw;
+            }
+            @include responsive_desktop_large() {
+              width: 30vw;
+              left: -2vw;
+            }
+          }
+          h4 {
+            padding: 0rem;
+            padding-top: 1rem;
+            margin-left: 4rem;
+            letter-spacing: 1px;
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+          }
+          p {
+            padding: 1rem;
+            margin-left: 4rem;
+            display: inline-block;
+            @include responsive_mobile() {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .next-section {
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-top: 10rem;
+      font-size: 1.5em;
+      opacity: 0.7;
+
+      a {
+        text-decoration: none;
+        color: color(text);
+
+        h6 {
+          opacity: 0;
+        }
+      }
+      .MuiSvgIcon-root {
+        font-size: 4.5rem;
+        opacity: 0.7;
+      }
+      &:hover,
+      &:active {
+        opacity: 1;
+        @include easeOut;
+        h6 {
+          opacity: 1;
+          @include easeOut;
+        }
+        .MuiSvgIcon-root {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
