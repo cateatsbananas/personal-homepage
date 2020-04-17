@@ -1,5 +1,4 @@
 import React from 'react';
-/* import './App.css'; */
 import './assets/scss/main.scss';
 /* import Backdrop from './components/Backdrop/Backdrop'; */
 import SideDrawer from './components/Header/SideDrawer';

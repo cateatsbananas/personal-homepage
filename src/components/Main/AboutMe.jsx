@@ -49,6 +49,7 @@ const AboutMe = () => {
               </h4>
               <p>
                 <FormattedMessage id="about.text2" defaultMessage="About Me" />
+                <a href="mailto:goran.beljan@gmx.ch">goran.beljan@gmx.ch</a>
               </p>
             </div>
           </div>

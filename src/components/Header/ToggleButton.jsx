@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { ToggleContext, ButtonContext } from '../ToggleStateContext';
-import MenuOpenTwoToneIcon from '@material-ui/icons/MenuOpenTwoTone';
 import { makeStyles } from '@material-ui/core/styles';
 import { Fade as Hamburger } from 'hamburger-react';
 
@@ -17,7 +16,6 @@ const ToggleButton = () => {
   const classes = useStyles();
 
   return (
-    /* <MenuOpenTwoToneIcon fontSize="large" className={classes.typography} onClick={() => setNavOpen(!navOpen)} /> */
     <div className="toggle">
       <Hamburger
         color="#317ba7"
@@ -29,12 +27,6 @@ const ToggleButton = () => {
         onToggle={(toggled) => setNavOpen(!navOpen)}
       />
     </div>
-
-    /* <button className="toggle-button" onClick={() => setNavOpen(!navOpen)}>
-      <div className="toggle-button_line" />
-      <div className="toggle-button_line" />
-      <div className="toggle-button_line" />
-    </button> */
   );
 };
 

@@ -10,6 +10,7 @@
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+
   @include padding(8rem, 7rem, 1rem, 7rem);
   @include margin(4rem, 0, 0rem, 0);
   text-shadow: 1px 0 2px black;

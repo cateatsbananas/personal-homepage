@@ -3,7 +3,6 @@ import { Context } from './Wrapper';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
@@ -23,12 +22,6 @@ const LanguageSelect = () => {
 
   return (
     <div className="language">
-      {/* <button value={'de'} id="languageGer" onClick={context.selectLang}>
-        Deutsch
-      </button>
-      <button value={'en-US'} id="languageEn" onClick={context.selectLang}>
-        English
-      </button> */}
       <FormControl variant="filled" className={classes.formControl}>
         <InputLabel id="language-select-filled-label">Language</InputLabel>
         <Select

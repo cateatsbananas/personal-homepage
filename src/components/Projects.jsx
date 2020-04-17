@@ -42,7 +42,7 @@ function SimpleCollapse() {
       projName={<FormattedMessage id="projects.projects.homepage" defaultMessage="Homepage" />}
       projText="React / SCSS "
       linkToProj="/"
-      chipLink="/"
+      chipLink="https://github.com/cateatsbananas/personal-homepage"
     />,
     <ProjComp
       src={media2}

@@ -23,7 +23,8 @@ a {
     }
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       opacity: 1;
       @include easeOut;
       h6 {

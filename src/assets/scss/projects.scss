@@ -76,6 +76,7 @@
 
     .makeStyles-root-85,
     .makeStyles-root-145 {
+      margin-bottom: 2rem;
       .grid,
       .grid-2 {
         z-index: 100;
@@ -106,8 +107,10 @@
           }
           .makeStyles-root-260,
           .makeStyles-root-292 {
-            float: right;
-            padding: 1.5rem;
+            display: flex;
+            justify-content: left;
+            padding-bottom: 0.5rem;
+            padding-left: 0.5rem;
           }
 
           &.grid-item:active,

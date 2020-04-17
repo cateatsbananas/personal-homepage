@@ -43,7 +43,7 @@ const SideDrawer = () => {
               <a href="/">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="/">
+              <a href="https://github.com/cateatsbananas?tab=repositories">
                 <FontAwesomeIcon icon={faGithubSquare} />
               </a>
               <a href="/">

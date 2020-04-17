@@ -22,10 +22,6 @@ function ProjComp({ src, projName, projText, linkToProj, chipLink }) {
     e.target.style.background = classes.media.color;
   }
 
-  /*   const handleExpandClick = () => {
-    setExpanded(!expanded);
-  }; */
-
   return (
     <div onMouseOver={changeOpacityBackground}>
       <Card className={classes.root}>
