@@ -58,7 +58,7 @@ const AboutMe = () => {
           <Link to="/">
             <div>
               <h6>
-                <FormattedMessage id="about.backToTop" defaultMessage="Back To Top" />
+                <FormattedMessage id="about.backToTop" defaultMessage="Back To Home" />
               </h6>
               <KeyboardArrowUpIcon />
             </div>

@@ -29,13 +29,13 @@ const Home = () => {
           <FormattedMessage id="title.title" defaultMessage="Portfolio" />
         </h1>
         <div className="icons">
-          <a href="/">
+          <a href="/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="https://github.com/cateatsbananas?tab=repositories">
+          <a href="https://github.com/cateatsbananas?tab=repositories" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithubSquare} />
           </a>
-          <a href="/">
+          <a href="/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faCodepen} />
           </a>
         </div>

@@ -1,5 +1,8 @@
 {
   "nav.projects": "Projekte",
+  "language.title": "Sprache",
+  "language.language_de": "Deutsch",
+  "language.language_en": "Englisch",
   "title.title": "Portfolio",
   "title.subTitle": "Hallo, Mein Name ist Goran und Webentwicklung ist meine Leidenschaft",
   "title.introduction": "Willkommen auf meiner Homepage. Hier finden Sie sämtliche meiner Projekte. Sowohl die Seite, als auch meine Projekte befinden sich noch im Aufbau, werden aber kontinuierlich aktualisiert",
@@ -10,5 +13,5 @@
   "about.text1": "Ich bin ein angehender Webentwickler, primär fonkussiert auf Frontendlösungen. Mit Hilfe des Internets, Büchern und Freunden habe ich mir die Fähigkeiten autodidaktisch beigebracht und versuche mich kontinuierlich zu verbessern und Neues zu lernen. Falls Sie mehr über mich oder meine Arbeit erfahren wollen, können Sie jederzeit auf Github oder Linkedin vorbeischauen.",
   "about.title2": "Mail",
   "about.text2": "Gerne können Sie mich auch per Mail kontaktieren: ",
-  "about.backToTop": "Zurück zum Anfang"
+  "about.backToTop": "Zurück zur Startseite"
 }

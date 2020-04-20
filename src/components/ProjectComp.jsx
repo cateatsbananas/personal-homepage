@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
 
 function ProjComp({ src, projName, projText, linkToProj, chipLink }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = useState(false);
-  const [gridHover, setGridHover] = useContext(ToggleContext);
+  /* const [expanded, setExpanded] = useState(false);
+  const [gridHover, setGridHover] = useContext(ToggleContext); */
 
   function changeOpacityBackground(e) {
     e.target.style.background = classes.media.color;
@@ -27,7 +27,7 @@ function ProjComp({ src, projName, projText, linkToProj, chipLink }) {
       <Card className={classes.root}>
         <CardHeader title={projName} subheader={projText} />
         <Chips label="Source" link={chipLink} />
-        <a href={linkToProj}>
+        <a href={linkToProj} target="_blank" rel="noopener noreferrer">
           <CardMedia className={classes.media} image={src} title="Projects"></CardMedia>
         </a>
       </Card>

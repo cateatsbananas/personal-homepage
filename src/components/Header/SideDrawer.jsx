@@ -12,6 +12,7 @@ library.add(faLinkedin, faGithubSquare, faCodepen);
 const SideDrawer = () => {
   const [navOpen, setNavOpen] = useContext(ToggleContext);
   const [isOpen, setOpen] = useContext(ButtonContext);
+
   return (
     <div className={navOpen ? 'active' : ''}>
       <nav
@@ -40,13 +41,13 @@ const SideDrawer = () => {
               <li>About</li>
             </Link>
             <div className="logo_links">
-              <a href="/">
+              <a href="/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="https://github.com/cateatsbananas?tab=repositories">
+              <a href="https://github.com/cateatsbananas?tab=repositories" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithubSquare} />
               </a>
-              <a href="/">
+              <a href="/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faCodepen} />
               </a>
             </div>

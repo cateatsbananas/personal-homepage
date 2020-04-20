@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { makeStyles, Grid } from '@material-ui/core';
 import ProjComp from './ProjectComp';
-import media from '../assets/images/cards/media.jpg';
+import my_homepage from '../assets/images/cards/my_homepage.png';
 import media2 from '../assets/images/cards/media2.jpg';
 import media3 from '../assets/images/cards/media3.jpg';
 import media4 from '../assets/images/cards/media4.jpg';
@@ -38,29 +38,21 @@ const useStyles = makeStyles((theme) => ({
 function SimpleCollapse() {
   let projectsArr = [
     <ProjComp
-      src={media}
+      src={my_homepage}
       projName={<FormattedMessage id="projects.projects.homepage" defaultMessage="Homepage" />}
       projText="React / SCSS "
       linkToProj="/"
       chipLink="https://github.com/cateatsbananas/personal-homepage"
     />,
-    <ProjComp
-      src={media2}
-      projName={<FormattedMessage id="projects.projects.project2" defaultMessage="Project 2" />}
-      projText="Placeholder as example"
-      linkToProj="/"
-      chipLink="/"
-    />,
+    <ProjComp src={media2} projName="Project 2" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
     <ProjComp src={media3} projName="Project 3" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
     <ProjComp src={media4} projName="Project 4" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
   ];
 
   let projectsExtraArr = [
-    <ProjComp src={media} projName="Project 5" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
     <ProjComp src={media2} projName="Project 6" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
     <ProjComp src={media3} projName="Project 7" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
     <ProjComp src={media4} projName="Project 8" projText="Placeholder fas example" linkToProj="/" chipLink="/" />,
-    <ProjComp src={media} projName="Project 9" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
     <ProjComp src={media2} projName="Project 10" projText="Placeholder as example" linkToProj="/" chipLink="/" />,
   ];
 
