@@ -78,7 +78,6 @@
   .sideDrawer {
     left: 0;
     transform: translate3d(0, 0, 0);
-    box-shadow: 3px 2px 18px 0px rgba(0, 0, 0, 0.75);
     visibility: visible;
     ul {
       height: 50%;
@@ -86,6 +85,7 @@
       flex-direction: column;
       list-style-type: none;
       display: flex;
+      box-shadow: 3px 2px 18px 0px rgba(0, 0, 0, 0.75);
     }
   }
 }

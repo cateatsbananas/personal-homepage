@@ -9,4 +9,12 @@
   margin-left: 1rem;
   opacity: 0.9;
   background: rgba(color(background), 0.1);
+  @include responsive_desktop() {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  @include responsive_desktop_large() {
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
 }

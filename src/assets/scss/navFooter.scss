@@ -1,0 +1,21 @@
+@import './variables';
+@import './functions';
+@import './mixins';
+
+footer {
+  z-index: 100;
+  color: color(text);
+  bottom: 0;
+  position: relative;
+  letter-spacing: 1px;
+
+  .footer-distributed {
+    text-align: center;
+    padding: 1rem;
+
+    .footer-center {
+      display: inline-block;
+      font-size: 0.6rem;
+    }
+  }
+}

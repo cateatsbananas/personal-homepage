@@ -46,10 +46,13 @@ const Home = () => {
           <p className="sm-heading">
             <FormattedMessage id="title.introduction" defaultMessage="Introduction Text" />
           </p>
-          <Link to="/projects">
-            <NextSection name={<FormattedMessage id="title.next" defaultMessage="Projects" />} />
-          </Link>
+          <p className="sm-heading" id="title-text-last">
+            <FormattedMessage id="title.info" defaultMessage="Click on the arrow to get to my project page" />
+          </p>
         </div>
+        <Link to="/projects">
+          <NextSection name={<FormattedMessage id="title.next" defaultMessage="Projects" />} />
+        </Link>
       </div>
     </motion.div>
   );

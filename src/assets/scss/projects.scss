@@ -4,7 +4,8 @@
 
 #projects {
   padding-top: 1rem;
-  overflow-x: hidden;
+  @include content_page();
+  /*  overflow-x: hidden; */
 
   @include responsive_desktop() {
     padding-top: 0.3rem;
@@ -17,13 +18,12 @@
   .wrapper {
     z-index: 100;
     position: relative;
-    height: 100%;
+    margin: 2rem 3rem;
 
     a {
       text-decoration: none;
       color: color(text);
     }
-    margin: 2rem 3rem;
 
     @include responsive_mobile() {
       margin: 2rem 1rem;
@@ -31,18 +31,20 @@
 
     @include responsive_desktop() {
       padding: 8rem 5rem;
+      @include padding(8rem, 3rem, 1rem, 3rem);
     }
     @include responsive_tablet() {
-      padding: 3rem 0rem;
+      @include padding(3rem, 0, 10rem, 0);
     }
 
     @include responsive_ipadPro_portrait() {
-      margin-bottom: 25rem;
+      margin-bottom: 30rem;
       padding: 3rem 5rem;
     }
     @include responsive_desktop_large() {
       padding: 5rem 5rem;
     }
+
     .title-projects {
       animation-name: fadeIn;
       animation-duration: 3s;
@@ -77,6 +79,7 @@
     .makeStyles-root-84,
     .makeStyles-root-144 {
       margin-bottom: 2rem;
+      position: relative;
       .grid,
       .grid-2 {
         z-index: 100;

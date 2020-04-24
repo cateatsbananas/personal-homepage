@@ -36,32 +36,37 @@
   }
 }
 
+@mixin content_page() {
+  z-index: 100;
+  margin: 2rem 2rem;
+}
+
 @mixin responsive_mobile {
-  @media only screen and (min-device-width: 320px) and(max-device-width: 767px) {
+  @media only screen and (min-width: 20em) and (max-width: 47.938em) {
     @content;
   }
 }
 
 @mixin responsive_tablet {
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  @media only screen and (min-width: 48em) and (max-width: 63.938em) {
     @content;
   }
 }
 
 @mixin responsive_desktop {
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1919px) {
+  @media only screen and (min-width: 64em) and (max-width: 119.938em) {
     @content;
   }
 }
 
 @mixin responsive_ipadPro_portrait {
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1919px) and (orientation: portrait) {
+  @media only screen and (min-width: 64em) and (orientation: portrait) {
     @content;
   }
 }
 
 @mixin responsive_desktop_large {
-  @media only screen and (min-device-width: 1920px) {
+  @media only screen and (min-width: 120em) {
     @content;
   }
 }

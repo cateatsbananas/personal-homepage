@@ -6,6 +6,7 @@ import { faLinkedin, faGithubSquare, faCodepen } from '@fortawesome/free-brands-
 import LanguageSelect from '../LanguageSelect';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import NavFooter from '../NavFooter';
 
 library.add(faLinkedin, faGithubSquare, faCodepen);
 
@@ -54,6 +55,9 @@ const SideDrawer = () => {
             <div className="language-select">
               <LanguageSelect />
             </div>
+            <footer>
+              <NavFooter />
+            </footer>
           </div>
         </ul>
       </nav>
