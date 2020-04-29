@@ -7,18 +7,10 @@
   @include content_page();
   /*  overflow-x: hidden; */
 
-  @include responsive_desktop() {
-    padding-top: 0.3rem;
-  }
-
-  @include responsive_ipadPro_portrait() {
-    padding-top: 0.1rem;
-  }
-
   .wrapper {
     z-index: 100;
     position: relative;
-    margin: 2rem 3rem;
+    margin: 1rem 3rem;
 
     a {
       text-decoration: none;
@@ -26,23 +18,20 @@
     }
 
     @include responsive_mobile() {
-      margin: 2rem 1rem;
+      margin: 1rem 1rem;
     }
-
     @include responsive_desktop() {
-      padding: 8rem 5rem;
-      @include padding(8rem, 3rem, 1rem, 3rem);
+      @include padding(1rem, 3rem, 0, 1rem);
     }
     @include responsive_tablet() {
-      @include padding(3rem, 0, 10rem, 0);
+      @include padding(1rem, 0, 2rem, 0);
     }
-
     @include responsive_ipadPro_portrait() {
-      margin-bottom: 30rem;
-      padding: 3rem 5rem;
+      margin-bottom: 25rem;
+      @include padding(1rem, 5rem, 0, 5rem);
     }
     @include responsive_desktop_large() {
-      padding: 5rem 5rem;
+      @include padding(3rem, 5rem, 0, 5rem);
     }
 
     .title-projects {

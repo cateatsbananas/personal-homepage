@@ -23,7 +23,9 @@ const AboutMe = () => {
     <motion.div id="about" initial="out" animate="in" exit="out" variants={pageTransition}>
       <div className="about-me">
         <div className="title_about">
-          <h3>About Me</h3>
+          <a href="/about">
+            <h3>About Me</h3>
+          </a>
         </div>
         <div className="content_about">
           <div className="about-1">

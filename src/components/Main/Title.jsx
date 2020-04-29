@@ -25,9 +25,11 @@ const Home = () => {
   return (
     <motion.div id="home" initial="out" animate="in" exit="out" variants={pageTransition}>
       <div className="title" onClick={() => (navOpen ? setNavOpen(false) : navOpen === false)}>
-        <h1 className="lg-heading">
-          <FormattedMessage id="title.title" defaultMessage="Portfolio" />
-        </h1>
+        <a href="/">
+          <h1 className="lg-heading">
+            <FormattedMessage id="title.title" defaultMessage="Portfolio" />
+          </h1>
+        </a>
         <div className="icons">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
@@ -47,7 +49,7 @@ const Home = () => {
             <FormattedMessage id="title.introduction" defaultMessage="Introduction Text" />
           </p>
           <p className="sm-heading" id="title-text-last">
-            <FormattedMessage id="title.info" defaultMessage="Click on the arrow to get to my project page" />
+            <FormattedMessage id="title.info" defaultMessage="Feel free to explore this site to your heart's content" />
           </p>
         </div>
         <Link to="/projects">

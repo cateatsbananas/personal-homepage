@@ -69,9 +69,11 @@ function SimpleCollapse() {
     <div id="projects">
       <div className="wrapper" onClick={() => (navOpen ? setNavOpen(false) : navOpen === false)}>
         <div className="title-projects">
-          <h3>
-            <FormattedMessage id="projects.title" defaultMessage="Projects" />
-          </h3>
+          <a href="/projects">
+            <h3>
+              <FormattedMessage id="projects.title" defaultMessage="Projects" />
+            </h3>
+          </a>
         </div>
         <div className={classes.root}>
           <div className="grid">
