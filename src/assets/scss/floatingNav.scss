@@ -9,7 +9,6 @@
 	width: auto;
 	right: 0;
 	height: 100vh;
-	/* top: 40%; */
 	display: flex;
 	justify-content: center;
 	box-sizing: border-box;
@@ -51,7 +50,6 @@
 					transform: scaleX(0);
 					bottom: 0;
 					transform-origin: right;
-					//transition: transform 0.9s;
 				}
 
 				li:hover::after {
@@ -96,7 +94,6 @@
 					transform: scaleX(0);
 					bottom: 0;
 					transform-origin: right;
-					//transition: transform 0.9s;
 				}
 
 				li:hover::after {

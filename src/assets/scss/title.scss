@@ -26,10 +26,6 @@
 		box-sizing: border-box;
 		text-shadow: 1px 0 2px black;
 
-		@include responsive_tablet() {
-			@include padding(0, 13rem, 0, 15rem);
-		}
-
 		.title-heading {
 			display: flex;
 			flex-direction: column;
@@ -192,7 +188,7 @@
 			animation: mainFadeIn 2s forwards;
 			opacity: 0;
 			animation-delay: 2.8s;
-			padding: 2rem 0;
+			@include padding(1rem, 0, 3rem, 0);
 		}
 
 		#title-text-last {

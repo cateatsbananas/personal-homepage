@@ -16,7 +16,7 @@ import { ToggleContext } from './ToggleStateContext';
 
 import { FormattedMessage } from 'react-intl';
 
-const useStyles = makeStyles((theme) => ({
+/* const useStyles = makeStyles((theme) => ({
 	root: {
 		width: '100%',
 		flexGrow: 1,
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 	container: {
 		maxWidth: '100vw',
 	},
-}));
+})); */
 
 function SimpleCollapse() {
 	let projectsArr = [
@@ -80,30 +80,6 @@ function SimpleCollapse() {
 			linkToProj="/"
 			chipLink="/"
 		/>,
-		<ProjComp
-			src={my_homepage_preview}
-			src2={my_homepage}
-			projName="Project 4"
-			projText="Placeholder as example"
-			linkToProj="/"
-			chipLink="/"
-		/>,
-		<ProjComp
-			src={my_homepage_preview}
-			src2={my_homepage}
-			projName="Project 2"
-			projText="Placeholder as example"
-			linkToProj="/"
-			chipLink="/"
-		/>,
-		<ProjComp
-			src={my_homepage_preview}
-			src2={my_homepage}
-			projName="Project 2"
-			projText="Placeholder as example"
-			linkToProj="/"
-			chipLink="/"
-		/>,
 	];
 
 	let projectsExtraArr = [
@@ -114,6 +90,10 @@ function SimpleCollapse() {
 			projText="Placeholder as example"
 			linkToProj="/"
 			chipLink="/"
+			projType="Website"
+			projTech="ReactJS"
+			projHtml="HTML5"
+			projCss="SCSS"
 		/>,
 		<ProjCompExtra
 			src={my_homepage_preview}
@@ -174,7 +154,7 @@ function SimpleCollapse() {
 	];
 
 	const [navOpen, setNavOpen] = useContext(ToggleContext);
-	const classes = useStyles();
+	/* const classes = useStyles(); */
 	const [checked, setChecked] = useState(false);
 
 	const handleChange = () => {
@@ -194,7 +174,7 @@ function SimpleCollapse() {
 						</h3>
 					</a>
 				</div>
-				<div className={classes.root}>
+				<div /* className={classes.root} */>
 					<div className="grid">
 						<Grid
 							container
@@ -204,23 +184,13 @@ function SimpleCollapse() {
 							justify="center"
 						>
 							{projectsArr.map((project, projectKey) => (
-								<Grid item xs={12} sm={6} lg={4}>
+								<Grid item xs={12} md={12} lg={4}>
 									<div key={projectKey} className="grid-item">
 										{project}
 									</div>
 								</Grid>
 							))}
 							<div className="collapse">
-								{/* <FormControlLabel
-									control={
-										<Switch
-											checked={checked}
-											onChange={handleChange}
-											color="primary"
-										/>
-									}
-									label="More"
-								/> */}
 								<div className="show-more-button">
 									<button
 										className={checked ? 'active' : ''}
@@ -254,7 +224,7 @@ function SimpleCollapse() {
 									justify="center"
 								>
 									{projectsExtraArr.map((projectExtra, projectExtraKey) => (
-										<Grid item xs={12} sm={6} md={3}>
+										<Grid item xs={12} lg={6}>
 											<div key={projectExtraKey} className="grid-extra-item">
 												{projectExtra}
 											</div>
@@ -265,9 +235,6 @@ function SimpleCollapse() {
 						</ExpansionPanelDetails>
 					</Collapse>
 				</div>
-				{/* { <Link to="/about">
-					<NextSection name="About Me" />
-				</Link>  */}
 			</div>
 		</div>
 	);

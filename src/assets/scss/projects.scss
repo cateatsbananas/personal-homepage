@@ -3,14 +3,6 @@
 @import './mixins';
 
 #projects {
-	/* padding-top: 1rem; */
-	/* @include content_page(); */
-	/* background: linear-gradient(
-		90deg,
-		rgba(19, 123, 167, 0.2) 0%,
-		rgba(34, 88, 120, 0.1) 35%,
-		rgba(19, 123, 167, 0.2) 100%
-	); */
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
@@ -29,6 +21,10 @@
 	}
 	@include responsive_desktop_large() {
 		padding: 0;
+	}
+
+	@include responsive_2160p() {
+		padding: 0 20%;
 	}
 	.wrapper {
 		z-index: 100;
@@ -114,9 +110,7 @@
 				display: flex;
 				position: relative;
 				flex-direction: column;
-				/* margin: 0.5rem; */
 				margin: auto;
-				/* overflow: hidden; */
 				background: color(background_overlay);
 
 				.project-container {
@@ -156,19 +150,15 @@
 					}
 					.project-overlay {
 						position: absolute;
-						/* width: 100%; */
 						height: 100%;
 						top: 0;
 						left: 0;
 						opacity: 0;
-						/* -webkit-transform: translate(100%, 100%);
-						-moz-transform: translate(100%, 100%); */
 						transform: translateY(-100%);
 						transition: all 1s cubic-bezier(0.54, 0.41, 0.43, 1.01);
 						transition-timing-function: cubic-bezier(0.35, 0.01, 0, 1);
 						background: color(project-overlay);
 						color: #f1f1f1;
-
 						font-family: 'Roboto';
 						font-weight: 200;
 
@@ -267,13 +257,9 @@
 							opacity: 1;
 						}
 						.project-overlay {
-							/* transform: translateY(-100%);
-							transition-timing-function: cubic-bezier(0.35, 0.01, 0, 1); */
 							top: 100%;
 							left: 0%;
 							opacity: 1;
-							/* bottom: 100%;
-							left: 100%; */
 
 							.project-info-wrapper {
 								background: color(shadow_colour);
@@ -349,6 +335,10 @@
 						font-family: 'Roboto';
 						color: color(text);
 						font-weight: 200;
+					}
+
+					&.active {
+						border: 1px solid color(text);
 					}
 				}
 

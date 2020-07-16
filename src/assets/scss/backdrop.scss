@@ -3,10 +3,10 @@
 @import './mixins';
 
 .backdrop {
-  height: auto;
-  width: auto;
-  top: 0;
-  left: 0;
-  position: fixed;
-  z-index: 99;
+	height: auto;
+	width: auto;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 99;
 }

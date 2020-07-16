@@ -3,9 +3,6 @@ import React from 'react';
 const NavFooter = () => {
 	return (
 		<div className="footer-distributed">
-			{/* 	<div className="language-select">
-				<LanguageSelect />
-			</div> */}
 			<div className="footer-center">
 				<p>&copy; Goran Beljan</p>
 			</div>

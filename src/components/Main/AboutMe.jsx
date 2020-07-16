@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const pageTransition = {
 	in: {
@@ -69,6 +70,9 @@ const AboutMe = () => {
 									id="about.backToTop"
 									defaultMessage="Back To Home"
 								/>
+								<div className="icon-up">
+									<FontAwesomeIcon icon={faArrowUp} />
+								</div>
 							</h6>
 						</div>
 					</Link>
