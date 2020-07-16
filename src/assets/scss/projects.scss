@@ -3,216 +3,362 @@
 @import './mixins';
 
 #projects {
-  padding-top: 1rem;
-  @include content_page();
-  /*  overflow-x: hidden; */
+	/* padding-top: 1rem; */
+	/* @include content_page(); */
+	/* background: linear-gradient(
+		90deg,
+		rgba(19, 123, 167, 0.2) 0%,
+		rgba(34, 88, 120, 0.1) 35%,
+		rgba(19, 123, 167, 0.2) 100%
+	); */
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	@include responsive_mobile() {
+		padding: 0 1rem;
+	}
+	@include responsive_desktop() {
+		padding: 0;
+	}
+	@include responsive_tablet() {
+		padding: 0 4rem;
+	}
+	@include responsive_ipadPro_portrait() {
+		padding: 0 4rem;
+	}
+	@include responsive_desktop_large() {
+		padding: 0;
+	}
+	.wrapper {
+		z-index: 100;
+		position: relative;
+		height: 100%;
+		width: 100%;
 
-  .wrapper {
-    z-index: 100;
-    position: relative;
-    margin: 1rem 3rem;
+		a {
+			text-decoration: none;
+			color: color(text);
+		}
 
-    a {
-      text-decoration: none;
-      color: color(text);
-    }
+		@include responsive_mobile() {
+			padding: 5rem 0rem;
+		}
+		@include responsive_tablet() {
+			@include padding(8rem, 0, 0, 0);
+		}
+		@include responsive_desktop() {
+			@include padding(8rem, 0, 0, 0);
+		}
+		@include responsive_ipadPro_portrait() {
+			@include padding(8rem, 0, 0, 0);
+		}
+		@include responsive_desktop_large() {
+			@include padding(8rem, 0, 0, 0);
+		}
 
-    @include responsive_mobile() {
-      margin: 1rem 1rem;
-    }
-    @include responsive_desktop() {
-      @include padding(1rem, 3rem, 0, 1rem);
-    }
-    @include responsive_tablet() {
-      @include padding(1rem, 0, 2rem, 0);
-    }
-    @include responsive_ipadPro_portrait() {
-      margin-bottom: 25rem;
-      @include padding(1rem, 5rem, 0, 5rem);
-    }
-    @include responsive_desktop_large() {
-      @include padding(3rem, 5rem, 0, 5rem);
-    }
+		.title-projects {
+			animation-name: fadeIn;
+			animation-duration: 3s;
 
-    .title-projects {
-      animation-name: fadeIn;
-      animation-duration: 3s;
+			h3 {
+				color: color(text);
+				z-index: 100;
+				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				text-shadow: 1px 0 2px black;
+				letter-spacing: 3px;
+				position: relative;
+				margin: 1rem 0;
+				padding-bottom: 1rem;
+				margin-bottom: 3rem;
+			}
 
-      h3 {
-        color: color(text);
-        z-index: 100;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-shadow: 1px 0 2px black;
-        letter-spacing: 3px;
-        position: relative;
-        margin: 1rem 0;
-        padding-bottom: 1rem;
-      }
+			h3:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 1.2px;
+				background-color: color(hover_h2);
+				left: 0;
+				background: color(hover_h2);
+				background: linear-gradient(
+					90deg,
+					transparent,
+					color(hover_text),
+					transparent
+				);
+				background-repeat: no-repeat;
+				background-size: 80%;
+				animation: transitionToRight 3s, animate 5s linear infinite;
+				bottom: 0;
+			}
+		}
 
-      h3:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 1.2px;
-        background-color: color(hover_h2);
-        left: 0;
-        animation-name: transitionToRight;
-        animation-duration: 2s;
-        bottom: 0;
-        text-shadow: 1px 0 2px black;
-      }
-    }
+		.grid {
+			z-index: 100;
+			width: 100%;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			padding-bottom: 2rem;
+			animation-name: fadeIn;
+			animation-duration: 3s;
 
-    .makeStyles-root-84,
-    .makeStyles-root-144 {
-      margin-bottom: 2rem;
-      position: relative;
-      .grid,
-      .grid-2 {
-        z-index: 100;
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding-bottom: 2rem;
-        animation-name: fadeIn;
-        animation-duration: 3s;
+			.grid-item {
+				z-index: 100;
+				width: 100%;
+				max-width: 50rem;
+				display: flex;
+				position: relative;
+				flex-direction: column;
+				/* margin: 0.5rem; */
+				margin: auto;
+				/* overflow: hidden; */
+				background: color(background_overlay);
 
-        .grid-item {
-          height: 100%;
-          width: 100%;
-          z-index: 100;
-          position: relative;
-          cursor: pointer;
-          display: block;
+				.project-container {
+					overflow: hidden;
+					position: relative;
+					width: 100%;
 
-          .MuiCardHeader-root {
-            display: inline-block;
-            .MuiCardHeader-content {
-              .MuiTypography-root {
-                font-size: 0.9rem;
-              }
-            }
-          }
-          .makeStyles-root-259,
-          .makeStyles-root-291 {
-            display: flex;
-            justify-content: left;
-            padding-bottom: 0.5rem;
-            padding-left: 0.5rem;
-          }
+					.project-header {
+						background-color: none;
+						padding: 1.5rem;
+						.project-name {
+							font-size: 1rem;
+						}
+						.project-text {
+							font-size: 0.9rem;
+						}
+					}
+					.project-body {
+						.project-img {
+							width: 100%;
+						}
+					}
 
-          &.grid-item:active,
-          &.grid-item:hover .makeStyles-root-192,
-          .makeStyles-root-252 {
-            opacity: 1;
-            @include easeOut;
-          }
+					.project-overlay-wrapper {
+						background: rgba(0, 0, 0, 0.3);
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						left: 0;
+						top: 0;
+						bottom: 0;
+						right: 0;
+						opacity: 0;
+						-webkit-transition: all 0.4s ease-in-out 0s;
+						-moz-transition: all 0.4s ease-in-out 0s;
+						transition: all 0.4s ease-in-out 0s;
+					}
+					.project-overlay {
+						position: absolute;
+						/* width: 100%; */
+						height: 100%;
+						top: 0;
+						left: 0;
+						opacity: 0;
+						/* -webkit-transform: translate(100%, 100%);
+						-moz-transform: translate(100%, 100%); */
+						transform: translateY(-100%);
+						transition: all 1s cubic-bezier(0.54, 0.41, 0.43, 1.01);
+						transition-timing-function: cubic-bezier(0.35, 0.01, 0, 1);
+						background: color(project-overlay);
+						color: #f1f1f1;
 
-          &.grid-item:hover {
-            .makeStyles-media-193,
-            .makeStyles-media-253 {
-              position: relative;
-              &.makeStyles-media-193::after,
-              &.makeStyles-media-253::after {
-                content: '';
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                background: rgba(color(background), 0.5);
-              }
-            }
-          }
-        }
+						font-family: 'Roboto';
+						font-weight: 200;
 
-        .collapse {
-          width: 100%;
-          .MuiFormControlLabel-root {
-            padding: 3rem 0;
-          }
+						.project-img {
+							position: relative;
+							bottom: 0;
+							max-width: 100%;
+							height: auto;
+						}
 
-          .MuiCollapse-wrapper {
-            background: rgba(color(background), 0.5);
-          }
+						.overlay-elements {
+							position: relative;
+							width: 100%;
+							height: 100%;
+							justify-content: center;
+							text-align: center;
+							align-items: center;
 
-          .expansion {
-            overflow: hidden;
-            height: 100%;
-            width: 100%;
-            .expansion-panel {
-              background: none;
-              overflow: hidden;
-              position: relative;
-              width: 100%;
+							.overlay-container {
+								position: relative;
+								padding: 0.2rem;
+								h6 {
+									padding: 0.3rem 0;
+									text-transform: uppercase;
+									letter-spacing: 2px;
+									font-size: 0.8rem;
+								}
+								.link-source-wrapper {
+									display: flex;
+									flex-direction: row;
+									justify-content: center;
+									align-items: center;
+									margin: 0.3rem 0;
+									a {
+										text-decoration: none;
+										padding: 0;
+										cursor: pointer;
+										margin: 0 0.5rem;
 
-              z-index: 100;
+										.link-source {
+											outline: none;
+											padding: 0.4rem 0.7rem;
+											background: none;
+											border: 1px solid white;
+											color: color(text);
+											cursor: pointer;
+											text-align: center;
+											justify-content: center;
+											align-items: center;
+											border-radius: 3rem;
+											transition: 0.2s;
+											text-transform: uppercase;
+											letter-spacing: 2px;
 
-              .MuiExpansionPanelSummary-root {
-                height: 5rem;
-                overflow: hidden;
+											&:hover,
+											&.active {
+												background: color(shadow_colour);
+												border: 1px solid color(shadow_colour);
+												transition: 0.2s;
+											}
+										}
+										&:hover,
+										&.active {
+											cursor: pointer;
+										}
+									}
+								}
 
-                .MuiExpansionPanelSummary-content {
-                  position: absolute;
-                  top: 0;
-                  overflow: hidden;
-                  align-content: center;
-                  align-self: center;
+								.project-info-wrapper {
+									display: block;
+									position: relative;
+									width: 100%;
+									height: auto;
+									right: 3rem;
+									top: 0.5rem;
+									margin: 0;
+									padding: 0 0.5rem;
+									justify-content: right;
+									text-align: right;
+									align-items: right;
 
-                  p {
-                    font-size: 1.3em;
-                  }
-                }
-              }
+									.project-info {
+										display: inline-block;
+										margin: 0.3rem 0.4rem;
+										text-transform: uppercase;
+										font-size: 0.8rem;
+									}
+								}
+							}
+						}
+					}
 
-              .MuiExpansionPanelSummary-expandIcon {
-                position: absolute;
-                top: 30%;
-                overflow: hidden;
-                align-content: center;
-                align-self: center;
-                &:hover,
-                &:active {
-                  color: color(hover_text);
-                }
-              }
-              .MuiExpansionPanelDetails-root {
-                padding: 0;
-                margin-top: 1rem;
+					&:hover,
+					&.active {
+						.project-overlay-wrapper {
+							opacity: 1;
+						}
+						.project-overlay {
+							/* transform: translateY(-100%);
+							transition-timing-function: cubic-bezier(0.35, 0.01, 0, 1); */
+							top: 100%;
+							left: 0%;
+							opacity: 1;
+							/* bottom: 100%;
+							left: 100%; */
 
-                .grid-2 {
-                  z-index: 100;
-                  width: 100%;
-                  overflow: hidden;
-                  position: relative;
-                  display: block;
-                  background: none;
+							.project-info-wrapper {
+								background: color(shadow_colour);
+								animation: comingProjectDesc 1.5s
+									cubic-bezier(0.64, 0.04, 0, 0.95);
 
-                  .grid-item {
-                    padding: 1rem 0.5rem;
-                  }
+								&:after {
+									content: '';
+									position: absolute;
+									display: inline;
+									right: 0.3rem;
 
-                  .makeStyles-media-194 {
-                    transform-origin: top;
-                  }
+									z-index: 99;
+									background: color(projects_highlight);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 
-                  .makeStyles-media-194:hover {
-                    cursor: pointer;
-                    transform-origin: top;
-                    transform: scaleY(1);
-                    transition: 1s;
-                    z-index: 101;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+		.collapse {
+			width: 100%;
+			.MuiFormControlLabel-root {
+				padding: 3rem 0;
+			}
+
+			.show-more-button {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				margin: 2rem;
+
+				button {
+					background: none;
+					border: 1px solid color(hover_text);
+					border-radius: 2rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 0.8rem 2rem;
+					overflow: hidden;
+					position: relative;
+					cursor: pointer;
+					transition: all 0.5s ease-in-out;
+					outline: none;
+
+					span {
+						position: absolute;
+						width: 100%;
+						background: color(hover_text);
+						color: #f1f1f1;
+						text-align: center;
+						line-height: 80px;
+						z-index: 99;
+						transition: all 0.5s ease-in-out;
+						font-size: 0.8rem;
+						text-transform: uppercase;
+						letter-spacing: 4px;
+						font-family: 'Roboto';
+						font-weight: 200;
+						align-items: center;
+						justify-content: center;
+					}
+
+					h6 {
+						font-size: 0.8rem;
+						align-items: center;
+						justify-content: center;
+						text-transform: uppercase;
+						letter-spacing: 4px;
+						font-family: 'Roboto';
+						color: color(text);
+						font-weight: 200;
+					}
+				}
+
+				.active {
+					span {
+						transform: translateX(100%);
+						transition-timing-function: cubic-bezier(0.35, 0.01, 0, 1);
+					}
+				}
+			}
+		}
+	}
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+/* import React, { useRef, useEffect, useState } from 'react';
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = useState(false);
@@ -21,4 +21,4 @@ function FadeInSection(props) {
   );
 }
 
-export default FadeInSection;
+export default FadeInSection; */

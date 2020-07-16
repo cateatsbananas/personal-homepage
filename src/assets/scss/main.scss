@@ -7,27 +7,42 @@
 @import './toggleButton.scss';
 @import './title.scss';
 @import './projects.scss';
+@import './projectsExtra.scss';
 @import './aboutMe.scss';
 @import './fadeIn.scss';
 @import './nextSection.scss';
 @import './navFooter.scss';
+@import './linkButton.scss';
+@import './siteFooter.scss';
+@import './floatingNav.scss';
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	height: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  color: color(text);
-  @include background;
-  background: color(background);
-  line-height: 1.5;
-  position: relative;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	color: color(text);
+	@include background;
+	background: color(background_overlay);
+	line-height: 1.5;
+	position: relative;
+
+	main {
+		padding: 0 2rem;
+		@include responsive_mobile() {
+			padding: 0;
+		}
+		@include responsive_tablet() {
+			padding: 0;
+		}
+	}
 }

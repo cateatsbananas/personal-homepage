@@ -2,19 +2,22 @@
 @import './functions';
 @import './mixins';
 
-.toggle {
-  position: fixed;
-  z-index: 200;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  opacity: 0.9;
-  background: rgba(color(background), 0.1);
-  @include responsive_desktop() {
-    margin-top: 2rem;
-    margin-left: 2rem;
-  }
-  @include responsive_desktop_large() {
-    margin-top: 3rem;
-    margin-left: 3rem;
-  }
+.head-wrapper {
+	position: fixed;
+	z-index: 200;
+	width: 100%;
+	animation-name: fadeIn;
+	animation-duration: 3.5s;
+	animation-timing-function: cubic-bezier(0.49, 0.01, 0, 1);
+
+	.toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 200;
+		margin: 0 2rem;
+		margin-top: 0.5rem;
+		margin-right: 0.1rem;
+		opacity: 0.9;
+	}
 }
