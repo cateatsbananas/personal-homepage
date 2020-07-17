@@ -8,9 +8,6 @@ function ProjComp({
 	linkToProj,
 	chipLink,
 	projType,
-	projTech,
-	projHtml,
-	projCss,
 }) {
 	return (
 		<div className="project-container">
@@ -36,10 +33,13 @@ function ProjComp({
 							</a>
 						</div>
 						<div className="project-info-wrapper">
-							<div className="project-info">{projType}</div>
-							<div className="project-info">{projTech}</div>
-							<div className="project-info">{projHtml}</div>
-							<div className="project-info">{projCss}</div>
+							<div className="project-info">
+								{projType
+									? projType.map((type, index) => {
+											return <div key={index}>{type}</div>;
+									  })
+									: 'Coming Soon'}
+							</div>
 						</div>
 					</div>
 				</div>

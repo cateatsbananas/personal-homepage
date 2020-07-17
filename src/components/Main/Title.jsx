@@ -33,7 +33,7 @@ const Home = () => {
 			exit="out"
 			variants={pageTransition}
 		>
-			<div
+			<section
 				className="title"
 				onClick={() => (navOpen ? setNavOpen(false) : navOpen === false)}
 			>
@@ -79,7 +79,7 @@ const Home = () => {
 				<LinkButton
 					name={<FormattedMessage id="title.next" defaultMessage="Projects" />}
 				/>
-			</div>
+			</section>
 		</motion.div>
 	);
 };

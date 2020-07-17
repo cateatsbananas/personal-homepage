@@ -121,6 +121,7 @@
 					.project-header {
 						background-color: none;
 						padding: 1.5rem;
+						text-align: center;
 						.project-name {
 							font-size: 1rem;
 						}
@@ -129,6 +130,8 @@
 						}
 					}
 					.project-body {
+						display: flex;
+						align-items: flex-end;
 						.project-img {
 							width: 100%;
 						}
@@ -163,6 +166,8 @@
 						font-weight: 200;
 
 						.project-img {
+							display: flex;
+							align-items: flex-end;
 							position: relative;
 							bottom: 0;
 							max-width: 100%;
@@ -241,10 +246,13 @@
 									align-items: right;
 
 									.project-info {
-										display: inline-block;
-										margin: 0.3rem 0.4rem;
+										display: inline-flex;
+										flex-direction: row;
 										text-transform: uppercase;
 										font-size: 0.8rem;
+										div {
+											margin: 0.3rem 0.4rem;
+										}
 									}
 								}
 							}
@@ -265,16 +273,6 @@
 								background: color(shadow_colour);
 								animation: comingProjectDesc 1.5s
 									cubic-bezier(0.64, 0.04, 0, 0.95);
-
-								&:after {
-									content: '';
-									position: absolute;
-									display: inline;
-									right: 0.3rem;
-
-									z-index: 99;
-									background: color(projects_highlight);
-								}
 							}
 						}
 					}

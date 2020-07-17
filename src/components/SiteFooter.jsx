@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 const SiteFooter = () => {
 	return (
-		<div className="footer">
+		<section className="footer">
 			<div className="footer-nav">
 				<nav className="navigation">
 					<ul className="navigation-content">
@@ -22,7 +22,7 @@ const SiteFooter = () => {
 					</ul>
 				</nav>
 			</div>
-		</div>
+		</section>
 	);
 };
 

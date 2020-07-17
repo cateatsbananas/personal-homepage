@@ -59,10 +59,10 @@ function SimpleCollapse() {
 			}
 			linkToProj="/"
 			chipLink="https://github.com/cateatsbananas/personal-homepage"
-			projType="Website"
-			projTech="ReactJS"
+			projType={['Website', 'ReactJS', 'HTML5', 'SCSS']}
+			/* projTech="ReactJS"
 			projHtml="HTML5"
-			projCss="SCSS"
+			projCss="SCSS" */
 		/>,
 		<ProjComp
 			src={my_homepage_preview}
@@ -90,10 +90,7 @@ function SimpleCollapse() {
 			projText="Placeholder as example"
 			linkToProj="/"
 			chipLink="/"
-			projType="Website"
-			projTech="ReactJS"
-			projHtml="HTML5"
-			projCss="SCSS"
+			projType={['Website', 'ReactJS', 'HTML5', 'SCSS']}
 		/>,
 		<ProjCompExtra
 			src={my_homepage_preview}
@@ -175,7 +172,7 @@ function SimpleCollapse() {
 					</a>
 				</div>
 				<div /* className={classes.root} */>
-					<div className="grid">
+					<section className="grid">
 						<Grid
 							container
 							spacing={1}
@@ -212,10 +209,10 @@ function SimpleCollapse() {
 								</div>
 							</div>
 						</Grid>
-					</div>
+					</section>
 					<Collapse in={checked} collapsedHeight={0}>
 						<ExpansionPanelDetails>
-							<div className="grid-extra">
+							<section className="grid-extra">
 								<Grid
 									container
 									spacing={1}
@@ -231,7 +228,7 @@ function SimpleCollapse() {
 										</Grid>
 									))}
 								</Grid>
-							</div>
+							</section>
 						</ExpansionPanelDetails>
 					</Collapse>
 				</div>

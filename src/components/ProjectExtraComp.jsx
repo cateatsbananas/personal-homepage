@@ -37,10 +37,13 @@ function ProjCompExtra({
 						</div>
 
 						<div className="project-extra-info-wrapper">
-							<div className="project-extra-info">{projType}</div>
-							<div className="project-extra-info">{projTech}</div>
-							<div className="project-extra-info">{projHtml}</div>
-							<div className="project-extra-info">{projCss}</div>
+							<div className="project-extra-info">
+								{projType
+									? projType.map((type, index) => {
+											return <div key={index}>{type}</div>;
+									  })
+									: 'Coming Soon'}
+							</div>
 						</div>
 					</div>
 				</div>

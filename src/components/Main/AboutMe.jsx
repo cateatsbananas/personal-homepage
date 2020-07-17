@@ -34,7 +34,7 @@ const AboutMe = () => {
 					</a>
 				</div>
 				<div className="content_about">
-					<div className="about-1">
+					<section className="about-1">
 						<div className={iconOpen ? 'section-active' : ''}>
 							<button className="icon" onClick={() => setIconOpen(!iconOpen)}>
 								<FontAwesomeIcon icon={faAddressCard} />
@@ -46,8 +46,8 @@ const AboutMe = () => {
 								<FormattedMessage id="about.text1" defaultMessage="About Me" />
 							</p>
 						</div>
-					</div>
-					<div className="about-2">
+					</section>
+					<section className="about-2">
 						<div className={iconOpen2 ? 'section-active-two' : ''}>
 							<button className="icon" onClick={() => setIconOpen2(!iconOpen2)}>
 								<FontAwesomeIcon icon={faAt} />
@@ -60,9 +60,9 @@ const AboutMe = () => {
 								<a href="mailto:goran.beljan@gmx.ch">goran.beljan@gmx.ch</a>
 							</p>
 						</div>
-					</div>
+					</section>
 				</div>
-				<div className="next-section">
+				<section className="next-section">
 					<Link to="/">
 						<div>
 							<h6>
@@ -76,7 +76,7 @@ const AboutMe = () => {
 							</h6>
 						</div>
 					</Link>
-				</div>
+				</section>
 			</div>
 		</motion.div>
 	);
