@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressCard, faAt } from '@fortawesome/free-solid-svg-icons';
+import {
+	faHtml5,
+	faCss3Alt,
+	faJsSquare,
+	faSass,
+	faReact,
+} from '@fortawesome/free-brands-svg-icons';
+import aboutMePic from '../../assets/images/etc/about-me-test.jpg';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const pageTransition = {
@@ -35,10 +42,10 @@ const AboutMe = () => {
 				</div>
 				<div className="content_about">
 					<section className="about-1">
-						<div className={iconOpen ? 'section-active' : ''}>
-							<button className="icon" onClick={() => setIconOpen(!iconOpen)}>
-								<FontAwesomeIcon icon={faAddressCard} />
-							</button>
+						<div className="about-picture">
+							<img src={aboutMePic} alt="About-Me" />
+						</div>
+						<div className="about-description">
 							<h4>
 								<FormattedMessage id="about.title1" defaultMessage="About Me" />
 							</h4>
@@ -48,18 +55,20 @@ const AboutMe = () => {
 						</div>
 					</section>
 					<section className="about-2">
-						<div className={iconOpen2 ? 'section-active-two' : ''}>
-							<button className="icon" onClick={() => setIconOpen2(!iconOpen2)}>
-								<FontAwesomeIcon icon={faAt} />
-							</button>
-							<h4>
-								<FormattedMessage id="about.title2" defaultMessage="About Me" />
-							</h4>
-							<p>
-								<FormattedMessage id="about.text2" defaultMessage="About Me" />
-								<a href="mailto:goran.beljan@gmx.ch">goran.beljan@gmx.ch</a>
-							</p>
+						<h4>
+							<FormattedMessage id="about.title2" defaultMessage="About Me" />
+						</h4>
+						<div className="overview-tech">
+							<FontAwesomeIcon icon={faHtml5} />
+							<FontAwesomeIcon icon={faCss3Alt} />
+							<FontAwesomeIcon icon={faJsSquare} />
+							<FontAwesomeIcon icon={faSass} />
+							<FontAwesomeIcon icon={faReact} />
 						</div>
+						<p>
+							<FormattedMessage id="about.text2" defaultMessage="About Me" />
+							<a href="mailto:goran.beljan@gmx.ch">goran.beljan@gmx.ch</a>
+						</p>
 					</section>
 				</div>
 				<section className="next-section">

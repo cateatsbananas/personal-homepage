@@ -3,7 +3,12 @@
 @import './mixins';
 
 #about {
-	padding-top: 2rem;
+	background: rgb(42, 42, 42);
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	/* padding-top: 2rem;
 	overflow: hidden;
 	@include content_page();
 
@@ -28,6 +33,26 @@
 
 	@include responsive_2160p() {
 		padding-top: 3rem;
+	} */
+
+	@include responsive_mobile() {
+		padding: 0 1rem;
+	}
+	@include responsive_desktop() {
+		padding: 0 5%;
+	}
+	@include responsive_tablet() {
+		padding: 0 10%;
+	}
+	@include responsive_ipadPro_portrait() {
+		padding: 0 10%;
+	}
+	@include responsive_desktop_large() {
+		padding: 0 5%;
+	}
+
+	@include responsive_2160p() {
+		padding: 0 20%;
 	}
 	.about-me {
 		z-index: 100;
@@ -103,107 +128,64 @@
 		}
 
 		.content_about {
-			z-index: 100;
-			margin: 1.5rem 3rem;
-			padding-top: 3rem;
-			/* background: linear-gradient(
-				90deg,
-				rgba(1, 0, 0, 00) 0%,
-				rgba(34, 88, 120, 0.1) 35%,
-				rgba(19, 123, 167, 0.2) 100%
-			); */
-			padding-bottom: 3rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
 			@include responsive_mobile() {
-				margin: 1.5rem 0;
+				flex-direction: column;
 			}
-
+			@include responsive_tablet() {
+				flex-direction: column;
+			}
+			@include responsive_ipadPro_portrait() {
+				flex-direction: column;
+			}
 			.about-1,
 			.about-2 {
-				display: block;
+				display: flex;
 				position: relative;
-				margin: 2rem;
-				padding: 0, 2rem;
+				flex-direction: column;
+				/* padding: 2rem; */
+				justify-content: start;
+				align-items: center;
 
-				button {
-					font-size: 3rem;
-					background: none;
-					outline: none;
-					border: none;
-					cursor: pointer;
-					color: color(text);
-
-					.icon {
-						display: block;
-						position: relative;
-						@include padding(1rem, 0, 1rem, 1rem);
-						@include padding(1rem, 0, 1rem, 5rem);
+				@include responsive_mobile() {
+					flex-direction: column;
+					width: 100%;
+				}
+			}
+			.about-1 {
+				width: 20rem;
+				align-items: center;
+				justify-content: center;
+				@include responsive_mobile() {
+					text-align: center;
+				}
+				.about-picture {
+					display: flex;
+					width: 15rem;
+					padding: 1rem;
+					img {
+						width: 100%;
 					}
 				}
-
-				h4,
-				p {
-					visibility: hidden;
-					display: none;
+				.about-description {
+					padding: 1rem;
+					width: 15rem;
 				}
+			}
 
-				.section-active,
-				.section-active-two {
-					button {
-						color: color(hover_h2);
-					}
-					h4,
-					p {
-						visibility: visible;
-						animation-name: fadeIn;
-						animation-duration: 2s;
-						@include responsive_mobile() {
-							padding: 0;
-							width: 60vw;
-						}
-					}
-
-					h4:before {
-						content: '';
-						position: absolute;
-						width: 50vw;
-						height: 1px;
-						background-color: color(hover_h2);
-						left: -10vw;
-						animation: transitionToRight 0.4s;
-
-						top: 0;
-						box-shadow: 1px 0 2px black;
-						@include responsive_tablet() {
-							width: 40vw;
-							left: -5vw;
-						}
-						@include responsive_desktop() {
-							width: 30vw;
-							left: -2vw;
-						}
-						@include responsive_desktop_large() {
-							width: 30vw;
-							left: -2vw;
-						}
-					}
-
-					h4 {
-						padding: 0rem;
-						padding-top: 1rem;
-						margin-left: 4rem;
-						letter-spacing: 1px;
-						position: relative;
-						display: block;
-						text-transform: uppercase;
-					}
-
-					p {
+			.about-2 {
+				width: 100%;
+				padding-top: 5%;
+				.overview-tech {
+					display: flexbox;
+					flex-wrap: wrap;
+					text-align: center;
+					font-size: 5rem;
+					svg {
 						padding: 1rem;
-						margin-left: 4rem;
-						display: inline-block;
-						@include responsive_mobile() {
-							margin-left: 0;
-						}
+						color: color(hover_text);
 					}
 				}
 			}
@@ -258,7 +240,7 @@
 				font-size: 4.5rem;
 				opacity: 0.7;
 			}
-			&:hover,
+			/* 	&:hover,
 			&:active {
 				opacity: 1;
 				@include easeOut;
@@ -269,7 +251,7 @@
 				.MuiSvgIcon-root {
 					opacity: 1;
 				}
-			}
+			} */
 		}
 	}
 }

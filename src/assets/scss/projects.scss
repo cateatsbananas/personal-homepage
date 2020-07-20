@@ -3,24 +3,25 @@
 @import './mixins';
 
 #projects {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+	background: rgb(42, 42, 42);
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
 	box-sizing: border-box;
 	@include responsive_mobile() {
 		padding: 0 1rem;
 	}
 	@include responsive_desktop() {
-		padding: 0;
+		padding: 0 5%;
 	}
 	@include responsive_tablet() {
-		padding: 0 4rem;
+		padding: 0 10%;
 	}
 	@include responsive_ipadPro_portrait() {
-		padding: 0 4rem;
+		padding: 0 10%;
 	}
 	@include responsive_desktop_large() {
-		padding: 0;
+		padding: 0 5%;
 	}
 
 	@include responsive_2160p() {
