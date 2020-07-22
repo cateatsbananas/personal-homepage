@@ -59,7 +59,7 @@ function SimpleCollapse() {
 			}
 			linkToProj="/"
 			chipLink="https://github.com/cateatsbananas/personal-homepage"
-			projType={['Website', 'ReactJS', 'HTML5', 'SCSS']}
+			projType={['REACTJS', 'SCSS', 'HTML5', 'Website']}
 		/>,
 		<ProjComp
 			src={my_homepage_preview}

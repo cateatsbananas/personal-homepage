@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,9 +8,9 @@ import {
 	faJsSquare,
 	faSass,
 	faReact,
+	faWordpress,
 } from '@fortawesome/free-brands-svg-icons';
 import aboutMePic from '../../assets/images/etc/about-me-test.jpg';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const pageTransition = {
 	in: {
@@ -23,9 +22,6 @@ const pageTransition = {
 };
 
 const AboutMe = () => {
-	const [iconOpen, setIconOpen] = useState(false);
-	const [iconOpen2, setIconOpen2] = useState(false);
-
 	return (
 		<motion.div
 			id="about"
@@ -59,33 +55,55 @@ const AboutMe = () => {
 							<FormattedMessage id="about.title2" defaultMessage="About Me" />
 						</h4>
 						<div className="overview-tech">
-							<FontAwesomeIcon icon={faHtml5} />
-							<FontAwesomeIcon icon={faCss3Alt} />
-							<FontAwesomeIcon icon={faJsSquare} />
-							<FontAwesomeIcon icon={faSass} />
-							<FontAwesomeIcon icon={faReact} />
+							<div className="icon-tech">
+								<FontAwesomeIcon icon={faHtml5} />
+								<span className="icon-tooltip">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Odio, non.
+								</span>
+							</div>
+							<div className="icon-tech">
+								<FontAwesomeIcon icon={faCss3Alt} />
+								<span className="icon-tooltip">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Odio, non.
+								</span>
+							</div>
+
+							<div className="icon-tech">
+								<FontAwesomeIcon icon={faJsSquare} />
+								<span className="icon-tooltip">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Odio, non.
+								</span>
+							</div>
+							<div className="icon-tech">
+								<FontAwesomeIcon icon={faSass} />
+								<span className="icon-tooltip">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Odio, non.
+								</span>
+							</div>
+							<div className="icon-tech">
+								<FontAwesomeIcon icon={faReact} />
+								<span className="icon-tooltip">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Odio, non.
+								</span>
+							</div>
+							<div className="icon-tech">
+								<FontAwesomeIcon icon={faWordpress} />
+								<span className="icon-tooltip">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Odio, non.
+								</span>
+							</div>
 						</div>
 						<p>
 							<FormattedMessage id="about.text2" defaultMessage="About Me" />
-							<a href="mailto:goran.beljan@gmx.ch">goran.beljan@gmx.ch</a>
 						</p>
 					</section>
 				</div>
-				<section className="next-section">
-					<Link to="/">
-						<div>
-							<h6>
-								<FormattedMessage
-									id="about.backToTop"
-									defaultMessage="Back To Home"
-								/>
-								<div className="icon-up">
-									<FontAwesomeIcon icon={faArrowUp} />
-								</div>
-							</h6>
-						</div>
-					</Link>
-				</section>
 			</div>
 		</motion.div>
 	);

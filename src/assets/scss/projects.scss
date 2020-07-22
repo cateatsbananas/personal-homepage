@@ -30,7 +30,8 @@
 	.wrapper {
 		z-index: 100;
 		position: relative;
-		height: 100%;
+		padding: 5em;
+		height: calc(100vh - 10em);
 		width: 100%;
 
 		a {
@@ -57,6 +58,7 @@
 		.title-projects {
 			animation-name: fadeIn;
 			animation-duration: 3s;
+			transition: 0.2s;
 
 			h3 {
 				color: color(text);

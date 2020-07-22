@@ -3,17 +3,14 @@
 	"language.title": "Sprache",
 	"title.title": "Goran",
 	"title.subTitle": "Angehender Frontend-Entwickler",
-	"title.introduction": "Willkommen auf meiner Homepage. Hier finden Sie Infomationen zu meinen Projekten und mir. Sowohl die Seite, als auch meine Projekte befinden sich noch im Aufbau, werden aber kontinuierlich aktualisiert",
-	"title.info": "Zögern Sie nicht, diese Seite nach Lust und Laune zu durchstöbern",
 	"title.next": "Projekte",
 	"projects.title": "Projekte",
 	"projects.projects.homepage": "Meine Homepage",
 	"projects.projects.homepage.desc": "Persönliche Homepage und Portfolio",
 	"projects.showMore": "Mehr Anzeigen",
 	"projects.showMore.open": "Weniger Anzeigen",
-	"about.title1": "Über mich",
+	"about.title1": "Wer bin ich",
 	"about.text1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd",
-	"about.title2": "Technologien",
-	"about.text2": "Gerne können Sie mich auch per Mail kontaktieren: ",
-	"about.backToTop": "Zurück zur Startseite"
+	"about.title2": "Skills & Erfahrungen",
+	"about.text2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd "
 }
