@@ -212,7 +212,7 @@ function SimpleCollapse() {
 							<section className="grid-extra">
 								<Grid
 									container
-									spacing={1}
+									spacing={2}
 									direction="row"
 									alignItems="center"
 									justify="center"

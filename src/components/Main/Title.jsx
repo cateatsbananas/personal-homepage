@@ -50,7 +50,7 @@ const Home = () => {
 								</h1>
 								<div className="icons">
 									<a
-										href="https://github.com/cateatsbananas?tab=repositories"
+										href="https://github.com/cateatsbananas"
 										target="_blank"
 										rel="noopener noreferrer"
 									>

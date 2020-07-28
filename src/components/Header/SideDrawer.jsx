@@ -51,11 +51,8 @@ const SideDrawer = () => {
 							<LanguageSelect />
 						</div>
 						<div className="logo_links">
-							<a href="/" target="_blank" rel="noopener noreferrer">
-								<FontAwesomeIcon icon={faLinkedin} />
-							</a>
 							<a
-								href="https://github.com/cateatsbananas?tab=repositories"
+								href="https://github.com/cateatsbananas"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -63,6 +60,9 @@ const SideDrawer = () => {
 							</a>
 							<a href="/" target="_blank" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faCodepen} />
+							</a>
+							<a href="/" target="_blank" rel="noopener noreferrer">
+								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
 						</div>
 					</div>

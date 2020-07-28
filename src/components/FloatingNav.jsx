@@ -33,7 +33,11 @@ const FloatingNav = () => {
 					</a>
 				</ul>
 				<ul className="floating-links">
-					<a href="/" rel="noopener noreferrer">
+					<a
+						href="https://github.com/cateatsbananas"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
 						<li>
 							<FontAwesomeIcon icon={faGithubSquare} />
 						</li>

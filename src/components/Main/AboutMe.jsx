@@ -8,7 +8,6 @@ import {
 	faJsSquare,
 	faSass,
 	faReact,
-	faWordpress,
 } from '@fortawesome/free-brands-svg-icons';
 import aboutMePic from '../../assets/images/etc/about-me-test.jpg';
 
@@ -57,46 +56,19 @@ const AboutMe = () => {
 						<div className="overview-tech">
 							<div className="icon-tech">
 								<FontAwesomeIcon icon={faHtml5} />
-								<span className="icon-tooltip">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Odio, non.
-								</span>
 							</div>
 							<div className="icon-tech">
 								<FontAwesomeIcon icon={faCss3Alt} />
-								<span className="icon-tooltip">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Odio, non.
-								</span>
 							</div>
 
 							<div className="icon-tech">
 								<FontAwesomeIcon icon={faJsSquare} />
-								<span className="icon-tooltip">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Odio, non.
-								</span>
 							</div>
 							<div className="icon-tech">
 								<FontAwesomeIcon icon={faSass} />
-								<span className="icon-tooltip">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Odio, non.
-								</span>
 							</div>
 							<div className="icon-tech">
 								<FontAwesomeIcon icon={faReact} />
-								<span className="icon-tooltip">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Odio, non.
-								</span>
-							</div>
-							<div className="icon-tech">
-								<FontAwesomeIcon icon={faWordpress} />
-								<span className="icon-tooltip">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Odio, non.
-								</span>
 							</div>
 						</div>
 						<p>

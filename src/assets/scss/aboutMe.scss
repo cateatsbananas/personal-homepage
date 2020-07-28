@@ -133,7 +133,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-			@include padding(0, 20px, 2rem, 20px);
+			@include padding(2rem, 20px, 2rem, 20px);
 			margin-left: auto;
 			margin-right: auto;
 			@include responsive_mobile() {
@@ -184,7 +184,7 @@
 
 			.about-2 {
 				width: 100%;
-				padding-top: 5%;
+				padding-top: 1rem;
 
 				.overview-tech {
 					display: flex;
@@ -194,38 +194,12 @@
 					justify-content: center;
 
 					.icon-tech {
-						cursor: pointer;
-
 						svg {
 							padding: 1rem;
 							font-size: 4rem;
 							color: color(text);
 							position: relative;
 							transition: 0.2s ease-in;
-
-							&:hover,
-							&.active {
-								color: color(hover_h2);
-								transition: 0.2s ease-in;
-							}
-						}
-						.icon-tooltip {
-							position: absolute;
-							top: 0%;
-							width: 100%;
-							padding: 10px;
-							color: color(text);
-							background: color(hover_h2);
-							z-index: 100;
-							opacity: 0;
-							transition: opacity 0.2s ease-in;
-						}
-						&:hover {
-							.icon-tooltip {
-								right: -20px;
-								opacity: 1;
-								transition: opacity 0.2s ease-in;
-							}
 						}
 					}
 				}
