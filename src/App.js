@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
 	NavToggleProvider,
 	ToggleButtonProvider,
+	ModalProvider,
 } from './components/ToggleStateContext';
 
 function App() {
@@ -19,22 +20,24 @@ function App() {
 			<div className="App">
 				<ToggleButtonProvider>
 					<NavToggleProvider>
-						<header className="App-header">
-							<SideDrawer />
-							<ToggleButton />
-						</header>
-						<div className="content-wrapper">
-							<nav>
-								<FloatingNav />
-							</nav>
-							<main className="App-main">
-								<Switch>
-									<Route path="/" exact component={Home} />
-									<Route path="/projects" component={SimpleCollapse} />
-									<Route path="/about" component={AboutMe} />
-								</Switch>
-							</main>
-						</div>
+						<ModalProvider>
+							<header className="App-header">
+								<SideDrawer />
+								<ToggleButton />
+							</header>
+							<div className="content-wrapper">
+								<nav>
+									<FloatingNav />
+								</nav>
+								<main className="App-main">
+									<Switch>
+										<Route path="/" exact component={Home} />
+										<Route path="/projects" component={SimpleCollapse} />
+										<Route path="/about" component={AboutMe} />
+									</Switch>
+								</main>
+							</div>
+						</ModalProvider>
 					</NavToggleProvider>
 				</ToggleButtonProvider>
 			</div>

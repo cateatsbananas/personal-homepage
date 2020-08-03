@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import {
-	makeStyles,
+	/* makeStyles, */
 	Grid,
 	Collapse,
 	ExpansionPanelDetails,
@@ -41,6 +41,14 @@ import { FormattedMessage } from 'react-intl';
 })); */
 
 function SimpleCollapse() {
+	const [navOpen, setNavOpen] = useContext(ToggleContext);
+	const [checked, setChecked] = useState(false);
+	/* const [modalIsOpen, setModalIsOpen] = useContext(ModalContext); */
+
+	const handleChange = () => {
+		setChecked((prev) => !prev);
+	};
+
 	let projectsArr = [
 		<ProjComp
 			src={my_homepage_preview}
@@ -147,14 +155,6 @@ function SimpleCollapse() {
 		/>,
 	];
 
-	const [navOpen, setNavOpen] = useContext(ToggleContext);
-	/* const classes = useStyles(); */
-	const [checked, setChecked] = useState(false);
-
-	const handleChange = () => {
-		setChecked((prev) => !prev);
-	};
-
 	return (
 		<div id="projects">
 			<div
@@ -218,7 +218,7 @@ function SimpleCollapse() {
 									justify="center"
 								>
 									{projectsExtraArr.map((projectExtra, projectExtraKey) => (
-										<Grid item xs={12} lg={6}>
+										<Grid item xs={12} lg={5}>
 											<div key={projectExtraKey} className="grid-extra-item">
 												{projectExtra}
 											</div>

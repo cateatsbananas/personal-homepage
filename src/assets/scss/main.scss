@@ -45,4 +45,8 @@ body {
 			padding: 0;
 		}
 	}
+
+	data-react-modal-body-trap {
+		z-index: 200;
+	}
 }

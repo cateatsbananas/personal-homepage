@@ -2,6 +2,7 @@ import React, { useState, createContext } from 'react';
 
 const ToggleContext = createContext();
 const ButtonContext = createContext();
+const ModalContext = createContext();
 
 const NavToggleProvider = (props) => {
 	const [navOpen, setNavOpen] = useState(false);
@@ -21,9 +22,20 @@ const ToggleButtonProvider = (props) => {
 	);
 };
 
+const ModalProvider = (props) => {
+	const [modalIsOpen, setModalIsOpen] = useState(false);
+	return (
+		<ModalContext.Provider value={[modalIsOpen, setModalIsOpen]}>
+			{props.children}
+		</ModalContext.Provider>
+	);
+};
+
 export {
 	ToggleContext,
 	ButtonContext,
+	ModalContext,
 	NavToggleProvider,
 	ToggleButtonProvider,
+	ModalProvider,
 };

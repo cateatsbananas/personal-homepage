@@ -1,14 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { makeStyles, Modal, Backdrop, Fade } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+	modal: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	paper: {
+		backgroundColor: 'rgb(42,42,42)',
+		/* border: '2px solid #000', */
+		boxShadow: theme.shadows[5],
+		padding: theme.spacing(2, 4, 3),
+	},
+}));
 
 function ProjComp({
 	src,
 	src2,
 	projName,
 	projText,
-	linkToProj,
+	projDesc,
 	chipLink,
 	projType,
 }) {
+	const classes = useStyles();
+	const [modalIsOpen, setModalIsOpen] = useState(false);
+
+	/* 	const handleOpen = () => {
+		setModalIsOpen(true);
+	}; */
+
+	/* const handleClose = () => {
+		setModalIsOpen(false);
+	}; */
+
 	return (
 		<div className="project-container">
 			<div className="project-header">
@@ -25,9 +51,32 @@ function ProjComp({
 					<div className="overlay-container">
 						<h6 className="project-name">{projName}</h6>
 						<div className="link-source-wrapper">
-							<a href={linkToProj} target="_blank" rel="noopener noreferrer">
-								<button className="link-source">Project</button>
-							</a>
+							<button
+								className="link-source"
+								onClick={() => setModalIsOpen(!modalIsOpen)}
+							>
+								Project
+							</button>
+
+							<Modal
+								aria-labelledby="transition-modal-title"
+								aria-describedby="transition-modal-description"
+								className={classes.modal}
+								open={modalIsOpen}
+								onClose={() => setModalIsOpen(false)}
+								closeAfterTransition
+								BackdropComponent={Backdrop}
+								BackdropProps={{
+									timeout: 500,
+								}}
+							>
+								<Fade in={modalIsOpen}>
+									<div className={classes.paper}>
+										<h3>{projName}</h3>
+										<h4>{projDesc}</h4>
+									</div>
+								</Fade>
+							</Modal>
 							<a href={chipLink} target="_blank" rel="noopener noreferrer">
 								<button className="link-source">Source</button>
 							</a>

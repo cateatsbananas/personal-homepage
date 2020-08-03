@@ -8,32 +8,6 @@
 	width: 100vw;
 	overflow-x: hidden;
 	box-sizing: border-box;
-	/* padding-top: 2rem;
-	overflow: hidden;
-	@include content_page();
-
-	@include responsive_mobile() {
-		padding-top: 0.1rem;
-	}
-	@include responsive_desktop() {
-		padding-top: 0.5rem;
-	}
-
-	@include responsive_ipadPro_portrait() {
-		margin-bottom: 30rem;
-	}
-
-	@include responsive_tablet() {
-		margin-bottom: 10rem;
-	}
-
-	@include responsive_desktop_large() {
-		padding-top: 0.5rem;
-	}
-
-	@include responsive_2160p() {
-		padding-top: 3rem;
-	} */
 
 	@include responsive_mobile() {
 		padding: 0 1rem;
@@ -134,8 +108,7 @@
 			flex-direction: row;
 			justify-content: center;
 			@include padding(2rem, 20px, 2rem, 20px);
-			margin-left: auto;
-			margin-right: auto;
+			margin: 0 auto;
 			@include responsive_mobile() {
 				flex-direction: column;
 			}
@@ -159,7 +132,7 @@
 				}
 			}
 			.about-1 {
-				width: 100%;
+				/* width: 100%; */
 				display: flexbox;
 				flex-wrap: wrap;
 				@include responsive_mobile() {
@@ -179,14 +152,27 @@
 					h4 {
 						text-align: center;
 					}
+
+					p {
+						flex-wrap: wrap;
+						padding: 0 0.5rem;
+					}
 				}
 			}
 
 			.about-2 {
-				width: 100%;
+				/* width: 100%; */
 				padding-top: 1rem;
+				display: flex;
+				flex-direction: column;
+
+				h4 {
+					width: 100%;
+					text-align: center;
+				}
 
 				.overview-tech {
+					width: 100%;
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
@@ -197,7 +183,7 @@
 						svg {
 							padding: 1rem;
 							font-size: 4rem;
-							color: color(text);
+							color: color(hover_h2);
 							position: relative;
 							transition: 0.2s ease-in;
 						}
@@ -206,8 +192,9 @@
 				p {
 					display: flexbox;
 					flex-wrap: wrap;
-					text-align: center;
-					padding: 0 2rem;
+					/* padding: 0 10rem; */
+					margin: 0 auto;
+					width: 50%;
 				}
 			}
 		}

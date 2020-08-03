@@ -200,38 +200,36 @@
 									justify-content: center;
 									align-items: center;
 									margin: 0.3rem 0;
-									a {
+
+									.link-source {
 										text-decoration: none;
 										padding: 0;
 										cursor: pointer;
 										margin: 0 0.5rem;
+										outline: none;
+										padding: 0.4rem 0.7rem;
+										background: none;
+										border: 1px solid white;
+										color: color(text);
+										cursor: pointer;
+										text-align: center;
+										justify-content: center;
+										align-items: center;
+										border-radius: 3rem;
+										transition: 0.2s;
+										text-transform: uppercase;
+										letter-spacing: 2px;
 
-										.link-source {
-											outline: none;
-											padding: 0.4rem 0.7rem;
-											background: none;
-											border: 1px solid white;
-											color: color(text);
-											cursor: pointer;
-											text-align: center;
-											justify-content: center;
-											align-items: center;
-											border-radius: 3rem;
-											transition: 0.2s;
-											text-transform: uppercase;
-											letter-spacing: 2px;
-
-											&:hover,
-											&.active {
-												background: color(shadow_colour);
-												border: 1px solid color(shadow_colour);
-												transition: 0.2s;
-											}
-										}
 										&:hover,
 										&.active {
-											cursor: pointer;
+											background: color(shadow_colour);
+											border: 1px solid color(shadow_colour);
+											transition: 0.2s;
 										}
+									}
+									&:hover,
+									&.active {
+										cursor: pointer;
 									}
 								}
 
@@ -247,6 +245,7 @@
 									justify-content: right;
 									text-align: right;
 									align-items: right;
+									/* clip-path: polygon(0% 0%, 100% 0, 99% 50%, 98% 100%, 0% 100%); */
 
 									.project-info {
 										display: inline-flex;
