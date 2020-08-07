@@ -50,23 +50,27 @@ const AboutMe = () => {
 					</section>
 					<section className="about-2">
 						<div className="overview-tech">
-							<div className="icon-tech">
-								<img src={html5} alt="HTML5 Logo" />
+							<div className="row">
+								<div className="icon-tech">
+									<img src={html5} alt="HTML5 Logo" />
+								</div>
+								<div className="icon-tech">
+									<img src={css3} alt="CSS3 Logo" />
+								</div>
+								<div className="icon-tech">
+									<img src={javascript} alt="Javascript Logo" />
+								</div>
+								<div className="icon-tech">
+									<img src={sass} alt="SASS Logo" />
+								</div>
 							</div>
-							<div className="icon-tech">
-								<img src={css3} alt="CSS3 Logo" />
-							</div>
-							<div className="icon-tech">
-								<img src={sass} alt="SASS Logo" />
-							</div>
-							<div className="icon-tech">
-								<img src={javascript} alt="Javascript Logo" />
-							</div>
-							<div className="icon-tech">
-								<img src={typescript} alt="Typescript Logo" />
-							</div>
-							<div className="icon-tech">
-								<img src={react} alt="React Logo" />
+							<div className="row">
+								<div className="icon-tech">
+									<img src={typescript} alt="Typescript Logo" />
+								</div>
+								<div className="icon-tech">
+									<img src={react} alt="React Logo" />
+								</div>
 							</div>
 						</div>
 						<div className="about-description">
