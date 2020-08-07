@@ -107,6 +107,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
+			flex-wrap: wrap;
 			@include padding(2rem, 20px, 2rem, 20px);
 			margin: 0 auto;
 			@include responsive_mobile() {
@@ -123,24 +124,40 @@
 				display: flex;
 				position: relative;
 				flex-direction: column;
-				justify-content: flex-start;
+				justify-content: flex-end;
 				align-items: center;
 
 				@include responsive_mobile() {
 					flex-direction: column;
 					width: 100%;
 				}
+
+				.about-description {
+					padding: 1rem;
+					max-width: 100%;
+					h4 {
+						text-align: center;
+						letter-spacing: 1px;
+						padding: 0.5rem 0;
+					}
+
+					p {
+						flex-wrap: wrap;
+						padding: 0 0.5rem;
+					}
+				}
 			}
 			.about-1 {
-				/* width: 100%; */
-				display: flexbox;
-				flex-wrap: wrap;
 				@include responsive_mobile() {
 					text-align: center;
 				}
+
+				@include responsive_desktop() {
+					width: 50%;
+				}
 				.about-picture {
 					display: flex;
-					width: 10rem;
+					width: 8rem;
 					padding: 1rem;
 					img {
 						width: 100%;
@@ -148,9 +165,11 @@
 				}
 				.about-description {
 					padding: 1rem;
-					width: 15rem;
+					max-width: 100%;
 					h4 {
 						text-align: center;
+						letter-spacing: 1px;
+						padding: 0.5rem 0;
 					}
 
 					p {
@@ -161,40 +180,68 @@
 			}
 
 			.about-2 {
-				/* width: 100%; */
-				padding-top: 1rem;
+				/* padding-top: 1rem;
 				display: flex;
-				flex-direction: column;
+				flex-direction: column; */
+				display: flexbox;
+				flex-wrap: wrap;
 
-				h4 {
-					width: 100%;
+				@include responsive_mobile() {
 					text-align: center;
 				}
 
+				@include responsive_desktop() {
+					width: 50%;
+				}
+
 				.overview-tech {
-					width: 100%;
+					/* width: 100%;
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
 					text-align: center;
+					justify-content: center; */
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					align-items: center;
 					justify-content: center;
+					position: relative;
+					/* width: 10rem; */
+					padding: 1rem;
+					/* height: 13.5rem; */
 
 					.icon-tech {
-						svg {
-							padding: 1rem;
-							font-size: 4rem;
-							color: color(hover_h2);
-							position: relative;
-							transition: 0.2s ease-in;
+						/* width: 100%; */
+						display: flex;
+						width: 4rem;
+						height: auto;
+						padding: 1rem;
+						justify-content: center;
+						align-items: center;
+
+						img {
+							/* font-size: 4rem; */
+							width: 100%;
+							height: 4rem;
 						}
 					}
 				}
+				/* padding: 1rem; */
+				max-width: 100%;
+				h4 {
+					text-align: center;
+					letter-spacing: 1px;
+					padding: 0.5rem 0;
+				}
 				p {
-					display: flexbox;
+					/* display: flexbox;
 					flex-wrap: wrap;
-					/* padding: 0 10rem; */
+					
 					margin: 0 auto;
-					width: 50%;
+					width: 75%; */
+					flex-wrap: wrap;
+					padding: 0 0.5rem;
 				}
 			}
 		}

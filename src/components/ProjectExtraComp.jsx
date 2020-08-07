@@ -1,4 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { makeStyles, Modal, Backdrop, Fade } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+	modal: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	paper: {
+		backgroundColor: 'rgb(42,42,42)',
+		/* border: '2px solid #000', */
+		boxShadow: theme.shadows[5],
+		padding: theme.spacing(2, 4, 3),
+	},
+}));
 
 function ProjCompExtra({
 	src,
@@ -8,10 +23,14 @@ function ProjCompExtra({
 	linkToProj,
 	chipLink,
 	projType,
+	projDesc,
 	projTech,
 	projHtml,
 	projCss,
 }) {
+	const classes = useStyles();
+	const [modalIsOpen, setModalIsOpen] = useState(false);
+
 	return (
 		<div className="project-extra-container">
 			<div className="project-extra-header">
@@ -28,9 +47,44 @@ function ProjCompExtra({
 					<div className="overlay-extra-container">
 						<h6 className="project-extra-name">{projName}</h6>
 						<div className="link-extra-source-wrapper">
-							<a href={linkToProj} target="_blank" rel="noopener noreferrer">
-								<button className="link-extra-source">Project</button>
-							</a>
+							<button
+								className="link-extra-source"
+								onClick={() => setModalIsOpen(!modalIsOpen)}
+							>
+								Project
+							</button>
+
+							<Modal
+								aria-labelledby="transition-modal-title"
+								aria-describedby="transition-modal-description"
+								className={classes.modal}
+								open={modalIsOpen}
+								onClose={() => setModalIsOpen(false)}
+								closeAfterTransition
+								BackdropComponent={Backdrop}
+								BackdropProps={{
+									timeout: 500,
+								}}
+							>
+								<Fade in={modalIsOpen}>
+									<div className={classes.paper}>
+										<h3>{projName}</h3>
+										<img
+											className="overlay-img"
+											src={src2}
+											alt="Project_image"
+										/>
+										<h4>{projDesc}</h4>
+										<p>
+											Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+											Esse, totam in numquam atque ratione expedita facere
+											necessitatibus pariatur, dolorem odit incidunt voluptates
+											nulla dolore assumenda deserunt modi consequuntur
+											veritatis voluptatibus.
+										</p>
+									</div>
+								</Fade>
+							</Modal>
 							<a href={chipLink} target="_blank" rel="noopener noreferrer">
 								<button className="link-extra-source">Source</button>
 							</a>

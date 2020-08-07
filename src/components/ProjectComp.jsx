@@ -69,11 +69,23 @@ function ProjComp({
 								BackdropProps={{
 									timeout: 500,
 								}}
+								style={{
+									overlay: {},
+									content: {
+										WebkitOverflowScrolling: 'touch',
+									},
+								}}
 							>
 								<Fade in={modalIsOpen}>
 									<div className={classes.paper}>
 										<h3>{projName}</h3>
-										<h4>{projDesc}</h4>
+										<img
+											className="overlay-img"
+											src={src2}
+											alt="Project_image"
+										/>
+										<h4>{projText}</h4>
+										<p>{projDesc}</p>
 									</div>
 								</Fade>
 							</Modal>

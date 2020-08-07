@@ -65,7 +65,9 @@ const Home = () => {
 								</div>
 							</div>
 							<div className="role">
-								<div className="block"></div>
+								{/* <div className="block">
+									
+								</div> */}
 								<p>
 									<FormattedMessage
 										id="title.subTitle"

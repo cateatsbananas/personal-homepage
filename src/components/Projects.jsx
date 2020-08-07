@@ -9,47 +9,19 @@ import ProjComp from './ProjectComp';
 import ProjCompExtra from './ProjectExtraComp';
 import my_homepage from '../assets/images/cards/my_homepage.png';
 import my_homepage_preview from '../assets/images/cards/my_homepage_preview.png';
-import media2 from '../assets/images/cards/media2.jpg';
-import media3 from '../assets/images/cards/media3.jpg';
-import media4 from '../assets/images/cards/media4.jpg';
 import { ToggleContext } from './ToggleStateContext';
 
 import { FormattedMessage } from 'react-intl';
 
-/* const useStyles = makeStyles((theme) => ({
-	root: {
-		width: '100%',
-		flexGrow: 1,
-	},
-	paper: {
-		padding: 10,
-		textAlign: 'center',
-		color: theme.palette.text.secondary,
-	},
-	heading: {
-		fontSize: theme.typography.pxToRem(15),
-		fontWeight: theme.typography.fontWeightRegular,
-		flexBasis: '33.33%',
-		flexShrink: 0,
-	},
-	control: {
-		padding: 10,
-	},
-	container: {
-		maxWidth: '100vw',
-	},
-})); */
-
-function SimpleCollapse() {
+const SimpleCollapse = () => {
 	const [navOpen, setNavOpen] = useContext(ToggleContext);
 	const [checked, setChecked] = useState(false);
-	/* const [modalIsOpen, setModalIsOpen] = useContext(ModalContext); */
 
 	const handleChange = () => {
 		setChecked((prev) => !prev);
 	};
 
-	let projectsArr = [
+	const projectsArr = [
 		<ProjComp
 			src={my_homepage_preview}
 			src2={my_homepage}
@@ -65,6 +37,7 @@ function SimpleCollapse() {
 					defaultMessage="Homepage"
 				/>
 			}
+			projDesc="ishfdshfsdhfg"
 			linkToProj="/"
 			chipLink="https://github.com/cateatsbananas/personal-homepage"
 			projType={['REACTJS', 'SCSS', 'HTML5', 'Website']}
@@ -157,7 +130,7 @@ function SimpleCollapse() {
 
 	return (
 		<div id="projects">
-			<div
+			<div 
 				className="wrapper"
 				onClick={() => (navOpen ? setNavOpen(false) : navOpen === false)}
 			>
@@ -168,7 +141,7 @@ function SimpleCollapse() {
 						</h3>
 					</a>
 				</div>
-				<div /* className={classes.root} */>
+				<div >
 					<section className="grid">
 						<Grid
 							container
@@ -178,10 +151,8 @@ function SimpleCollapse() {
 							justify="center"
 						>
 							{projectsArr.map((project, projectKey) => (
-								<Grid item xs={12} md={12} lg={4}>
-									<div key={projectKey} className="grid-item">
-										{project}
-									</div>
+								<Grid key={projectKey} item xs={12} md={12} lg={4}>
+									<div className="grid-item">{project}</div>
 								</Grid>
 							))}
 							<div className="collapse">
@@ -218,10 +189,8 @@ function SimpleCollapse() {
 									justify="center"
 								>
 									{projectsExtraArr.map((projectExtra, projectExtraKey) => (
-										<Grid item xs={12} lg={5}>
-											<div key={projectExtraKey} className="grid-extra-item">
-												{projectExtra}
-											</div>
+										<Grid key={projectExtraKey} item xs={12} lg={5}>
+											<div className="grid-extra-item">{projectExtra}</div>
 										</Grid>
 									))}
 								</Grid>

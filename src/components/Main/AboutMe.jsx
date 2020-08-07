@@ -1,15 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FormattedMessage } from 'react-intl';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faHtml5,
-	faCss3Alt,
-	faJsSquare,
-	faSass,
-	faReact,
-} from '@fortawesome/free-brands-svg-icons';
+
 import aboutMePic from '../../assets/images/etc/about-me-test.jpg';
+import javascript from '../../assets/images/logos/javascript.svg';
+import css3 from '../../assets/images/logos/css3.svg';
+import html5 from '../../assets/images/logos/html5.svg';
+import sass from '../../assets/images/logos/sass-1.svg';
+import react from '../../assets/images/logos/react-2.svg';
+import typescript from '../../assets/images/logos/typescript.svg';
 
 const pageTransition = {
 	in: {
@@ -50,30 +49,34 @@ const AboutMe = () => {
 						</div>
 					</section>
 					<section className="about-2">
-						<h4>
-							<FormattedMessage id="about.title2" defaultMessage="About Me" />
-						</h4>
 						<div className="overview-tech">
 							<div className="icon-tech">
-								<FontAwesomeIcon icon={faHtml5} />
+								<img src={html5} alt="HTML5 Logo" />
 							</div>
 							<div className="icon-tech">
-								<FontAwesomeIcon icon={faCss3Alt} />
-							</div>
-
-							<div className="icon-tech">
-								<FontAwesomeIcon icon={faJsSquare} />
+								<img src={css3} alt="CSS3 Logo" />
 							</div>
 							<div className="icon-tech">
-								<FontAwesomeIcon icon={faSass} />
+								<img src={sass} alt="SASS Logo" />
 							</div>
 							<div className="icon-tech">
-								<FontAwesomeIcon icon={faReact} />
+								<img src={javascript} alt="Javascript Logo" />
+							</div>
+							<div className="icon-tech">
+								<img src={typescript} alt="Typescript Logo" />
+							</div>
+							<div className="icon-tech">
+								<img src={react} alt="React Logo" />
 							</div>
 						</div>
-						<p>
-							<FormattedMessage id="about.text2" defaultMessage="About Me" />
-						</p>
+						<div className="about-description">
+							<h4>
+								<FormattedMessage id="about.title2" defaultMessage="About Me" />
+							</h4>
+							<p>
+								<FormattedMessage id="about.text2" defaultMessage="About Me" />
+							</p>
+						</div>
 					</section>
 				</div>
 			</div>
