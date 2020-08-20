@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles, Modal, Backdrop, Fade } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles((theme) => ({
 	modal: {
@@ -51,7 +52,10 @@ function ProjCompExtra({
 								className="link-extra-source"
 								onClick={() => setModalIsOpen(!modalIsOpen)}
 							>
-								Project
+								<FormattedMessage
+									id="projects.projects.project.link"
+									defaultMessage="Project"
+								/>
 							</button>
 
 							<Modal
@@ -74,19 +78,18 @@ function ProjCompExtra({
 											src={src2}
 											alt="Project_image"
 										/>
-										<h4>{projDesc}</h4>
-										<p>
-											Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-											Esse, totam in numquam atque ratione expedita facere
-											necessitatibus pariatur, dolorem odit incidunt voluptates
-											nulla dolore assumenda deserunt modi consequuntur
-											veritatis voluptatibus.
-										</p>
+										<h4>{projText}</h4>
+										<p>{projDesc}</p>
 									</div>
 								</Fade>
 							</Modal>
 							<a href={chipLink} target="_blank" rel="noopener noreferrer">
-								<button className="link-extra-source">Source</button>
+								<button className="link-extra-source">
+									<FormattedMessage
+										id="projects.projects.project.source"
+										defaultMessage="Source"
+									/>
+								</button>
 							</a>
 						</div>
 

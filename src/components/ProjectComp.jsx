@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles, Modal, Backdrop, Fade } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles((theme) => ({
 	modal: {
@@ -55,7 +56,10 @@ function ProjComp({
 								className="link-source"
 								onClick={() => setModalIsOpen(!modalIsOpen)}
 							>
-								Project
+								<FormattedMessage
+									id="projects.projects.project.link"
+									defaultMessage="Project"
+								/>
 							</button>
 
 							<Modal
@@ -90,7 +94,12 @@ function ProjComp({
 								</Fade>
 							</Modal>
 							<a href={chipLink} target="_blank" rel="noopener noreferrer">
-								<button className="link-source">Source</button>
+								<button className="link-source">
+									<FormattedMessage
+										id="projects.projects.project.source"
+										defaultMessage="Source"
+									/>
+								</button>
 							</a>
 						</div>
 						<div className="project-info-wrapper">

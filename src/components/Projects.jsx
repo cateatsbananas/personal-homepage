@@ -37,7 +37,12 @@ const SimpleCollapse = () => {
 					defaultMessage="Homepage"
 				/>
 			}
-			projDesc="ishfdshfsdhfg"
+			projDesc={
+				<FormattedMessage
+					id="projects.projects.project.desc"
+					defaultMessage="Description"
+				/>
+			}
 			linkToProj="/"
 			chipLink="https://github.com/cateatsbananas/personal-homepage"
 			projType={['REACTJS', 'SCSS', 'HTML5', 'Website']}
@@ -130,7 +135,7 @@ const SimpleCollapse = () => {
 
 	return (
 		<div id="projects">
-			<div 
+			<div
 				className="wrapper"
 				onClick={() => (navOpen ? setNavOpen(false) : navOpen === false)}
 			>
@@ -141,7 +146,7 @@ const SimpleCollapse = () => {
 						</h3>
 					</a>
 				</div>
-				<div >
+				<div>
 					<section className="grid">
 						<Grid
 							container
@@ -201,6 +206,6 @@ const SimpleCollapse = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default SimpleCollapse;

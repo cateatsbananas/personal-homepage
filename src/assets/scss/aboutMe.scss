@@ -134,7 +134,15 @@
 
 				.about-description {
 					padding: 1rem;
-					max-width: 100%;
+					width: 50%;
+					@include responsive_mobile() {
+						width: 100%;
+					}
+
+					@include responsive_tablet() {
+						width: 100%;
+					}
+
 					h4 {
 						text-align: center;
 						letter-spacing: 1px;
@@ -144,11 +152,14 @@
 					p {
 						flex-wrap: wrap;
 						padding: 0 0.5rem;
+						width: 100%;
+						align-items: center;
+						justify-content: center;
 					}
 				}
 			}
 			.about-1 {
-				margin-bottom: 2rem;
+				margin-bottom: 4rem;
 				@include responsive_mobile() {
 					text-align: center;
 				}
@@ -161,61 +172,30 @@
 						width: 100%;
 					}
 				}
-				.about-description {
-					padding: 1rem;
-					width: 50%;
-					@include responsive_mobile() {
-						width: 100%;
-					}
-
-					h4 {
-						text-align: center;
-						letter-spacing: 1px;
-						padding: 0.5rem 0;
-					}
-
-					p {
-						flex-wrap: wrap;
-						padding: 0 0.5rem;
-						width: 100%;
-						align-items: center;
-						justify-content: center;
-					}
-				}
 			}
 
 			.about-2 {
-				/* padding-top: 1rem;
-				display: flex;
-				flex-direction: column; */
-				display: flexbox;
-				flex-wrap: wrap;
-
 				@include responsive_mobile() {
 					text-align: center;
 				}
 
 				.overview-tech {
-					width: 100%;
-					display: flex;
-					flex-wrap: wrap;
+					max-width: 100%;
+					/* flex-wrap: wrap; */
 					flex-direction: row;
 					text-align: center;
 					justify-content: center;
 
 					.row {
 						display: flex;
-						/* flex-wrap: wrap; */
-						/* height: 10rem; */
+
 						flex-direction: row;
 						align-items: center;
 						justify-content: center;
 						position: relative;
-						/* width: 10rem; */
 						padding: 1rem;
 
 						.icon-tech {
-							/* width: 100%; */
 							display: flex;
 							width: 4rem;
 							height: auto;
@@ -224,29 +204,10 @@
 							align-items: center;
 
 							img {
-								/* font-size: 4rem; */
 								width: 100%;
 								height: 4rem;
 							}
 						}
-					}
-					/* height: 13.5rem; */
-				}
-				/* padding: 1rem; */
-
-				.about-description {
-					width: 50%;
-					h4 {
-						text-align: center;
-						letter-spacing: 1px;
-						padding: 0.5rem 0;
-					}
-					p {
-						flex-wrap: wrap;
-						padding: 0 0.5rem;
-						width: 100%;
-						align-items: center;
-						justify-content: center;
 					}
 				}
 			}

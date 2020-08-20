@@ -79,6 +79,9 @@
 						border-radius: 2rem;
 						cursor: pointer;
 						transition: 0.2s;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
 
 						&:hover,
 						&.active {
