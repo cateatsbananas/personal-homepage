@@ -36,9 +36,9 @@ const AboutMe = () => {
 				</div>
 				<div className="content_about">
 					<section className="about-1">
-						<div className="about-picture">
+						{/* <div className="about-picture">
 							<img src={aboutMePic} alt="About-Me" />
-						</div>
+						</div> */}
 						<div className="about-description">
 							<h4>
 								<FormattedMessage id="about.title1" defaultMessage="About Me" />
