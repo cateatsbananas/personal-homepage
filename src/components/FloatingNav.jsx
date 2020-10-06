@@ -5,11 +5,7 @@ import {
 	faHome,
 	faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
-import {
-	faLinkedin,
-	faGithubSquare,
-	faCodepen,
-} from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare, faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 const FloatingNav = () => {
 	return (
@@ -45,11 +41,6 @@ const FloatingNav = () => {
 					<a href="/about" rel="noopener noreferrer">
 						<li>
 							<FontAwesomeIcon icon={faCodepen} />
-						</li>
-					</a>
-					<a href="/projects" rel="noopener noreferrer">
-						<li>
-							<FontAwesomeIcon icon={faLinkedin} />
 						</li>
 					</a>
 				</ul>

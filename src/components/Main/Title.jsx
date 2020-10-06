@@ -2,11 +2,7 @@ import React, { useContext } from 'react';
 import { ToggleContext } from '../ToggleStateContext';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faLinkedin,
-	faGithubSquare,
-	faCodepen,
-} from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare, faCodepen } from '@fortawesome/free-brands-svg-icons';
 import { FormattedMessage } from 'react-intl';
 import { motion } from 'framer-motion';
 import LinkButton from '../LinkButton';
@@ -20,7 +16,7 @@ const pageTransition = {
 	},
 };
 
-library.add(faLinkedin, faGithubSquare, faCodepen);
+library.add(faGithubSquare, faCodepen);
 
 const Home = () => {
 	const [navOpen, setNavOpen] = useContext(ToggleContext);
@@ -58,9 +54,6 @@ const Home = () => {
 									</a>
 									<a href="/" target="_blank" rel="noopener noreferrer">
 										<FontAwesomeIcon icon={faCodepen} />
-									</a>
-									<a href="/" target="_blank" rel="noopener noreferrer">
-										<FontAwesomeIcon icon={faLinkedin} />
 									</a>
 								</div>
 							</div>
